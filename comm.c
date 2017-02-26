@@ -255,6 +255,7 @@ void ExecuteReceivedCommand(u16 valCMD) {
             U1STAbits.UTXEN = ENABLE;
             U1TXREG = TXbuffer[0];
             while (DIR == HIGH);
+            //add pump off here
             Reset();
             break;
 
