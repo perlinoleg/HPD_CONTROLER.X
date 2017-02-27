@@ -256,6 +256,7 @@ void ExecuteReceivedCommand(u16 valCMD) {
             U1TXREG = TXbuffer[0];
             while (DIR == HIGH);
             //add pump off here
+            //to implement the change i need special case
             Reset();
             break;
 
