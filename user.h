@@ -150,6 +150,7 @@ typedef struct PULSE_PARAMETER_TAG {
 
 /******************************************************************************/
 /* User Structers                                                             */
+
 /******************************************************************************/
 struct strCommFlags {
     u16 FrameReceivedFlag : 1;
@@ -190,9 +191,10 @@ struct sDevices2 {
     u16 LightGuideReconnected : 1;
     u16 LightGuideIsValid : 1;
     u16 ApplicatorDataIsValid : 1;
-    u16 PulseDone :1 ;
+    u16 PulseDone : 1;
+    u16 SlideModeSelected : 1;
     //u16 IsLongPulse : 1; //if  0 then short pulse if 1 then long pulse
-} Devices2 = {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,0};
+} Devices2 = {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 /******************************************************************************/
 
 /******************************************************************************/
@@ -211,6 +213,7 @@ u16 DiodeVoltage = 0;
 u32 CapVoltage = 0;
 u16 FlashCheckSum = 0;
 u16 StoredCheckSum = 0;
+u16 SlideModePulsePerSquare = 0;
 /******************************************************************************/
 
 /******************************************************************************/
@@ -269,7 +272,8 @@ extern struct sDevices2 {
     u16 LightGuideReconnected : 1;
     u16 LightGuideIsValid : 1;
     u16 ApplicatorDataIsValid : 1;
-    u16 PulseDone :1 ;
+    u16 PulseDone : 1;
+    u16 SlideModeSelected : 1;
 } Devices2;
 
 /******************************************************************************/
@@ -291,6 +295,7 @@ extern u16 DiodeVoltage;
 extern u32 CapVoltage;
 extern u16 FlashCheckSum;
 extern u16 StoredCheckSum;
+extern u16 SlideModePulsePerSquare;
 /******************************************************************************/
 
 /******************************************************************************/

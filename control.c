@@ -29,6 +29,7 @@
 #define PULSE_TASK_WAIT_TRIGGER_RELEASE    4
 #define PULSE_TASK_WAIT_FOR_READY          5
 #define PULSE_TASK_FAULT                   6 
+#define PULSE_TASK_SLIDE_MODE_BUZZER       8 
 /*================================================*/
 
 /*================= Variables ===============================*/
@@ -59,6 +60,8 @@ extern u16 LddriverCurrent;
 extern u16 IndxDiodeCurrent;
 extern u16 CoolingLevel;
 extern float ActualTecTemperature;
+extern u16 SlideModePulseCounter;
+extern u16 cnt100uS;
 /*================================================*/
 
 /*================= Functions ===============================*/
@@ -150,6 +153,7 @@ void system_state_tasks(void) {
                     else if (CoolingLevel == 100)Setpoint = 1; //set tec temperature
                     Devices.ChargerIsEnabled = TRUE; // enable charger
                     Devices.LddriverIsEnable = TRUE; //enable driver
+                    SlideModePulseCounter = 0;
                 } else {
                     SystemStateToUpdate = SystemState;
                     Devices2.LighGuideIsConnected = FALSE; //applicator disconnected
@@ -396,8 +400,27 @@ void pulse_fire_tasks(void) {
             case PULSE_TASK_WAIT_OFF_TIME:
                 BUZZ = LOW;
                 if (offTimeCntr >= Pulse_Off_Time) {
-                    if (Devices2.AutoRepeat)current_pulse_fire_task = PULSE_TASK_WAIT_FOR_START_PULSE;
-                    else current_pulse_fire_task = PULSE_TASK_WAIT_TRIGGER_RELEASE;
+                    if (Devices2.AutoRepeat) {
+                        if (Devices2.SlideModeSelected == TRUE) {
+                            if (SlideModePulseCounter >= SlideModePulsePerSquare) {
+                                current_pulse_fire_task = PULSE_TASK_SLIDE_MODE_BUZZER;
+                                SlideModePulseCounter = 0;
+                                cnt100uS = 0;
+                                BUZZ = HIGH; // sound buzzer for end of square
+                            } else {
+                                current_pulse_fire_task = PULSE_TASK_WAIT_FOR_START_PULSE;
+                            }
+                        } else {
+                            current_pulse_fire_task = PULSE_TASK_WAIT_FOR_START_PULSE;
+                        }
+                    } else current_pulse_fire_task = PULSE_TASK_WAIT_TRIGGER_RELEASE;
+                }
+                break;
+
+            case PULSE_TASK_SLIDE_MODE_BUZZER:
+                if (cnt100uS > 1200) {
+                    BUZZ = LOW;
+                    current_pulse_fire_task = PULSE_TASK_WAIT_TRIGGER_RELEASE;
                 }
                 break;
 
@@ -507,7 +530,7 @@ void measurments_tasks(void) {
 
         ActualLddriverCurrent = ActualDiodeCurrent1 + ActualDiodeCurrent2;
 #ifndef release       
-//        ActualLddriverCurrent = 25; //TODO for validation
+        //        ActualLddriverCurrent = 25; //TODO for validation
 #endif
 #ifndef maincfg_debug       
         if ((ActualLddriverCurrent > MaxAllowedCurrent) || (ActualLddriverCurrent < MinAllowedCurrent)) {

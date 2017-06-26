@@ -4,7 +4,7 @@
 #ifdef maincfg
 #define SW_VERSION_MAJOR      1
 #define SW_VERSION_MINOR      1
-#define SW_VERSION_BUILD      64
+#define SW_VERSION_BUILD      81
 #endif
 /* Microcontroller MIPs (FCY) */
 #define SYS_FREQ        80000000L

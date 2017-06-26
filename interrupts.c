@@ -133,6 +133,7 @@ u16 TecPidTimer = 0;
 u16 PumpVoltageSensingTimer = 0;
 u16 TecVoltageSensingTimer = 0;
 u16 IndxDiodeCurrent = 0;
+u16 SlideModePulseCounter = 0;
 
 extern u8 RXbuffer[256]; //rx bufer
 extern u8 indxRXbuffer; //index of rx buffer
@@ -214,6 +215,7 @@ void __attribute__((interrupt, no_auto_psv)) _T2Interrupt(void) {
     Devices2.PulseDone = 1;
     LED2 = 0;
     PulseCounter++;
+    SlideModePulseCounter++;
     T2CONbits.TON = 0;
     T3CONbits.TON = 0;
     IFS0bits.T3IF = CLEAR; /* reset Timer 3 interrupt flag */

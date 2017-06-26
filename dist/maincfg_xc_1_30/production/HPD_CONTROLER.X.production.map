@@ -118,13 +118,13 @@ Program Memory  [Origin = 0x1000, Length = 0x8ffe]
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
-.text                       0x1000               0x8a4           0xcf6  (3318)
-.const                      0x18a4               0x198           0x264  (612)
-.text                       0x1a3c              0x28e8          0x3d5c  (15708)
-.dinit                      0x4324                0xbc           0x11a  (282)
-.text                       0x43e0                0x60            0x90  (144)
+.text                       0x1000               0x8de           0xd4d  (3405)
+.const                      0x18de               0x1c0           0x2a0  (672)
+.text                       0x1a9e              0x2a94          0x3fde  (16350)
+.dinit                      0x4532                0xbc           0x11a  (282)
+.text                       0x45ee                0x60            0x90  (144)
 
-                 Total program memory used (bytes):         0x4e60  (20064) 36%
+                 Total program memory used (bytes):         0x5175  (20853) 37%
 
 
 Ivt Memory  [Origin = 0x4, Length = 0xfc]
@@ -145,18 +145,18 @@ Data Memory  [Origin = 0x800, Length = 0x2400]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-.nbss                        0x800                   0            0xb8  (184)
-.ndata                       0x8b8                   0             0xc  (12)
-.nbss                        0x8c4                   0             0xa  (10)
-.ndata                       0x8ce                   0             0xa  (10)
-.nbss                        0x8d8                   0            0x14  (20)
-.ndata                       0x8ec                   0             0xc  (12)
-.bss                         0x8f8                   0           0x2f0  (752)
-.data                        0xbe8                   0             0xa  (10)
-_0402F54058526288           0x2be0                   0            0x10  (16)
-_0402F42058526288           0x2bf0                   0            0x10  (16)
+.nbss                        0x800                   0            0xbc  (188)
+.ndata                       0x8bc                   0             0xc  (12)
+.nbss                        0x8c8                   0             0xa  (10)
+.ndata                       0x8d2                   0             0xa  (10)
+.nbss                        0x8dc                   0            0x14  (20)
+.ndata                       0x8f0                   0             0xc  (12)
+.bss                         0x8fc                   0           0x2f0  (752)
+.data                        0xbec                   0             0xa  (10)
+_040CD6605947b43b           0x2be0                   0            0x10  (16)
+_040CD5405947b43b           0x2bf0                   0            0x10  (16)
 
-                 Total data memory used (bytes):          0x412  (1042) 11%
+                 Total data memory used (bytes):          0x416  (1046) 11%
 
 
 Dynamic Memory Usage
@@ -164,9 +164,9 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0xbf2                              0x1fee  (8174)
+stack                        0xbf6                              0x1fea  (8170)
 
-                 Maximum dynamic memory (bytes):         0x1fee  (8174)
+                 Maximum dynamic memory (bytes):         0x1fea  (8170)
 
 
 External Symbols in Data Memory (by address):
@@ -202,216 +202,220 @@ External Symbols in Data Memory (by address):
                     0x0850                  _pntrID
                     0x0852                  _Devices
                     0x0854                  _FaultNumber
-                    0x0856                  _PulseCounter
-                    0x085e                  _LgPulseCounter
-                    0x0862                  _LgTypeId
-                    0x0864                  _DiodeVoltage
-                    0x0866                  _CapVoltage
-                    0x086a                  _FlashCheckSum
-                    0x086c                  _StoredCheckSum
-                    0x086e                  _current_pulse_fire_task
-                    0x0870                  _current_diode_mode_task
-                    0x0872                  _offTimeCntr
-                    0x0874                  _SPIMeasure
-                    0x0876                  _ActualDiodeCurrent1
-                    0x0878                  _ActualDiodeCurrent2
-                    0x087a                  _ActualLddriverCurrent
-                    0x087c                  _MaxAllowedCurrent
-                    0x087e                  _MinAllowedCurrent
-                    0x0880                  _CapacitorAvarageRawValue
-                    0x0882                  _current_capacitors_bank_task
-                    0x0884                  _ChargerTimeCntr
-                    0x0888                  _CalculatedChargeVoltage
-                    0x088a                  _ActualCapacitorVoltage
-                    0x088c                  _MaxChargeLimit
-                    0x088e                  _MinChargeLimit
-                    0x0890                  _OnTimeForChargeCalculation
-                    0x0892                  _DEBUG_MEMORY_CapVoltage
-                    0x0894                  _FlickerTimer
-                    0x0896                  _HeaderCheckSum
-                    0x0897                  _FrameCheckSum
-                    0x0898                  _BytesToEndOfFrame
-                    0x089a                  _CommTimeOutCount
-                    0x089c                  _cnt100uS
-                    0x089e                  _cntSPIMeasure
-                    0x08a0                  _TecPidTimer
-                    0x08a2                  _PumpVoltageSensingTimer
-                    0x08a4                  _TecVoltageSensingTimer
-                    0x08a6                  _IndxDiodeCurrent
-                    0x08aa                  _current_app_short_tasks
-                    0x08ac                  _appShortTimeOut
-                    0x08ae                  _LightGuideShortTimeOut
-                    0x08b0                  _current_trigger_task
-                    0x08b2                  _Trigger
-                    0x08b4                  _TriggerCounter
-                    0x08b6                  _current_lihgtguide_short_tasks
-                    0x08b8                  _StoredTECValue
-                    0x08ba                  _CoolingLevel
-                    0x08bc                  _ActualTecTemperature
-                    0x08c0                  _ActualTermistorValue
-                    0x08c4                  _current_interlock_task
-                    0x08c6                  _InterlockTimeOut
-                    0x08c8                  _current_discharge_task
-                    0x08ca                  _LddriverCurrent
-                    0x08cc                  _current_lddriver_task
-                    0x08ce                  _CommFlags
-                    0x08d0                  _Devices2
-                    0x08d2                  _SystemState
-                    0x08d4                  _Pulse_On_Time
-                    0x08d6                  _Pulse_Off_Time
-                    0x08d8                  _indxRXbuffer
-                    0x08d9                  _indxTXbuff
-                    0x08da                  _FrameLen
-                    0x08dc                  _tx100uS
-                    0x08de                  _NoCommunicationTimer
-                    0x08e0                  _PumpVoltage
-                    0x08e2                  _PumpTimer
-                    0x08e4                  _SpiTimeout
-                    0x08e6                  _current_fan_task
-                    0x08e8                  _indxWaterTemperature
-                    0x08ea                  _TemperatureAdSamplingCounter
-                    0x08ec                  _current_pump_task
-                    0x08ee                  _PumpVoltageMonitor
-                    0x08f0                  _ActualWaterTemperature
-                    0x08f4                  _SystemStateToUpdate
-                    0x08f6                  _MeasurePeriod
-                    0x08f8                  _RXbuffer
-                    0x09f8                  _TXbuffer
-                    0x0af8                  _IDData
-                    0x0b78                  _ApplicatorCalibration
-                    0x0b98                  _ROM_NO
-                    0x0ba0                  _IDs
-                    0x0bb0                  _ID_APP
-                    0x0bb8                  _ID_LIGHTGUIDE
-                    0x0bc0                  _DiodeCurrent1
-                    0x0bca                  _DiodeCurrent2
-                    0x0bd4                  _MeasuredDiodeVoltage
-                    0x0bde                  _TecTemperature
-                    0x0be8                  _WaterTemperature
+                    0x0856                  _Birst_On_Time
+                    0x0858                  _Birst_Off_Time
+                    0x085a                  _PulseCounter
+                    0x0862                  _LgPulseCounter
+                    0x0866                  _LgTypeId
+                    0x0868                  _DiodeVoltage
+                    0x086a                  _CapVoltage
+                    0x086e                  _FlashCheckSum
+                    0x0870                  _StoredCheckSum
+                    0x0872                  _current_pulse_fire_task
+                    0x0874                  _current_diode_mode_task
+                    0x0876                  _offTimeCntr
+                    0x0878                  _SPIMeasure
+                    0x087a                  _ActualDiodeCurrent1
+                    0x087c                  _ActualDiodeCurrent2
+                    0x087e                  _ActualLddriverCurrent
+                    0x0880                  _MaxAllowedCurrent
+                    0x0882                  _MinAllowedCurrent
+                    0x0884                  _CapacitorAvarageRawValue
+                    0x0886                  _current_capacitors_bank_task
+                    0x0888                  _ChargerTimeCntr
+                    0x088c                  _CalculatedChargeVoltage
+                    0x088e                  _ActualCapacitorVoltage
+                    0x0890                  _MaxChargeLimit
+                    0x0892                  _MinChargeLimit
+                    0x0894                  _OnTimeForChargeCalculation
+                    0x0896                  _DEBUG_MEMORY_CapVoltage
+                    0x0898                  _FlickerTimer
+                    0x089a                  _HeaderCheckSum
+                    0x089b                  _FrameCheckSum
+                    0x089c                  _BytesToEndOfFrame
+                    0x089e                  _CommTimeOutCount
+                    0x08a0                  _cnt100uS
+                    0x08a2                  _cntSPIMeasure
+                    0x08a4                  _TecPidTimer
+                    0x08a6                  _PumpVoltageSensingTimer
+                    0x08a8                  _TecVoltageSensingTimer
+                    0x08aa                  _IndxDiodeCurrent
+                    0x08ae                  _current_app_short_tasks
+                    0x08b0                  _appShortTimeOut
+                    0x08b2                  _LightGuideShortTimeOut
+                    0x08b4                  _current_trigger_task
+                    0x08b6                  _Trigger
+                    0x08b8                  _TriggerCounter
+                    0x08ba                  _current_lihgtguide_short_tasks
+                    0x08bc                  _StoredTECValue
+                    0x08be                  _CoolingLevel
+                    0x08c0                  _ActualTecTemperature
+                    0x08c4                  _ActualTermistorValue
+                    0x08c8                  _current_interlock_task
+                    0x08ca                  _InterlockTimeOut
+                    0x08cc                  _current_discharge_task
+                    0x08ce                  _LddriverCurrent
+                    0x08d0                  _current_lddriver_task
+                    0x08d2                  _CommFlags
+                    0x08d4                  _Devices2
+                    0x08d6                  _SystemState
+                    0x08d8                  _Pulse_On_Time
+                    0x08da                  _Pulse_Off_Time
+                    0x08dc                  _indxRXbuffer
+                    0x08dd                  _indxTXbuff
+                    0x08de                  _FrameLen
+                    0x08e0                  _tx100uS
+                    0x08e2                  _NoCommunicationTimer
+                    0x08e4                  _PumpVoltage
+                    0x08e6                  _PumpTimer
+                    0x08e8                  _SpiTimeout
+                    0x08ea                  _current_fan_task
+                    0x08ec                  _indxWaterTemperature
+                    0x08ee                  _TemperatureAdSamplingCounter
+                    0x08f0                  _current_pump_task
+                    0x08f2                  _PumpVoltageMonitor
+                    0x08f4                  _ActualWaterTemperature
+                    0x08f8                  _SystemStateToUpdate
+                    0x08fa                  _MeasurePeriod
+                    0x08fc                  _RXbuffer
+                    0x09fc                  _TXbuffer
+                    0x0afc                  _IDData
+                    0x0b7c                  _ApplicatorCalibration
+                    0x0b9c                  _ROM_NO
+                    0x0ba4                  _IDs
+                    0x0bb4                  _ID_APP
+                    0x0bbc                  _ID_LIGHTGUIDE
+                    0x0bc4                  _DiodeCurrent1
+                    0x0bce                  _DiodeCurrent2
+                    0x0bd8                  _MeasuredDiodeVoltage
+                    0x0be2                  _TecTemperature
+                    0x0bec                  _WaterTemperature
                     0x2be0                  _Spi1TxBuff
                     0x2bf0                  _Spi1RxBuff
 
 External Symbols in Data Memory (by name):
 
-                    0x088a                  _ActualCapacitorVoltage
-                    0x0876                  _ActualDiodeCurrent1
-                    0x0878                  _ActualDiodeCurrent2
-                    0x087a                  _ActualLddriverCurrent
-                    0x08bc                  _ActualTecTemperature
-                    0x08c0                  _ActualTermistorValue
-                    0x08f0                  _ActualWaterTemperature
-                    0x0b78                  _ApplicatorCalibration
-                    0x0898                  _BytesToEndOfFrame
-                    0x0888                  _CalculatedChargeVoltage
-                    0x0866                  _CapVoltage
-                    0x0880                  _CapacitorAvarageRawValue
-                    0x0884                  _ChargerTimeCntr
-                    0x08ce                  _CommFlags
-                    0x089a                  _CommTimeOutCount
-                    0x08ba                  _CoolingLevel
-                    0x0892                  _DEBUG_MEMORY_CapVoltage
+                    0x088e                  _ActualCapacitorVoltage
+                    0x087a                  _ActualDiodeCurrent1
+                    0x087c                  _ActualDiodeCurrent2
+                    0x087e                  _ActualLddriverCurrent
+                    0x08c0                  _ActualTecTemperature
+                    0x08c4                  _ActualTermistorValue
+                    0x08f4                  _ActualWaterTemperature
+                    0x0b7c                  _ApplicatorCalibration
+                    0x0858                  _Birst_Off_Time
+                    0x0856                  _Birst_On_Time
+                    0x089c                  _BytesToEndOfFrame
+                    0x088c                  _CalculatedChargeVoltage
+                    0x086a                  _CapVoltage
+                    0x0884                  _CapacitorAvarageRawValue
+                    0x0888                  _ChargerTimeCntr
+                    0x08d2                  _CommFlags
+                    0x089e                  _CommTimeOutCount
+                    0x08be                  _CoolingLevel
+                    0x0896                  _DEBUG_MEMORY_CapVoltage
                     0x0852                  _Devices
-                    0x08d0                  _Devices2
-                    0x0bc0                  _DiodeCurrent1
-                    0x0bca                  _DiodeCurrent2
-                    0x0864                  _DiodeVoltage
+                    0x08d4                  _Devices2
+                    0x0bc4                  _DiodeCurrent1
+                    0x0bce                  _DiodeCurrent2
+                    0x0868                  _DiodeVoltage
                     0x084e                  _ES
                     0x0854                  _FaultNumber
-                    0x086a                  _FlashCheckSum
-                    0x0894                  _FlickerTimer
-                    0x0897                  _FrameCheckSum
-                    0x08da                  _FrameLen
-                    0x0896                  _HeaderCheckSum
-                    0x0af8                  _IDData
-                    0x0bb0                  _ID_APP
-                    0x0bb8                  _ID_LIGHTGUIDE
-                    0x0ba0                  _IDs
-                    0x08a6                  _IndxDiodeCurrent
+                    0x086e                  _FlashCheckSum
+                    0x0898                  _FlickerTimer
+                    0x089b                  _FrameCheckSum
+                    0x08de                  _FrameLen
+                    0x089a                  _HeaderCheckSum
+                    0x0afc                  _IDData
+                    0x0bb4                  _ID_APP
+                    0x0bbc                  _ID_LIGHTGUIDE
+                    0x0ba4                  _IDs
+                    0x08aa                  _IndxDiodeCurrent
                     0x080e                  _Input
-                    0x08c6                  _InterlockTimeOut
+                    0x08ca                  _InterlockTimeOut
                     0x0842                  _LastDeviceFlag
                     0x083e                  _LastDiscrepancy
                     0x0840                  _LastFamilyDiscrepancy
                     0x0834                  _LastStoredPulseCntr
-                    0x08ca                  _LddriverCurrent
-                    0x085e                  _LgPulseCounter
-                    0x0862                  _LgTypeId
-                    0x08ae                  _LightGuideShortTimeOut
-                    0x087c                  _MaxAllowedCurrent
-                    0x088c                  _MaxChargeLimit
-                    0x08f6                  _MeasurePeriod
-                    0x0bd4                  _MeasuredDiodeVoltage
-                    0x087e                  _MinAllowedCurrent
-                    0x088e                  _MinChargeLimit
-                    0x08de                  _NoCommunicationTimer
-                    0x0890                  _OnTimeForChargeCalculation
+                    0x08ce                  _LddriverCurrent
+                    0x0862                  _LgPulseCounter
+                    0x0866                  _LgTypeId
+                    0x08b2                  _LightGuideShortTimeOut
+                    0x0880                  _MaxAllowedCurrent
+                    0x0890                  _MaxChargeLimit
+                    0x08fa                  _MeasurePeriod
+                    0x0bd8                  _MeasuredDiodeVoltage
+                    0x0882                  _MinAllowedCurrent
+                    0x0892                  _MinChargeLimit
+                    0x08e2                  _NoCommunicationTimer
+                    0x0894                  _OnTimeForChargeCalculation
                     0x0812                  _Output
-                    0x0856                  _PulseCounter
-                    0x08d6                  _Pulse_Off_Time
-                    0x08d4                  _Pulse_On_Time
-                    0x08e2                  _PumpTimer
-                    0x08e0                  _PumpVoltage
-                    0x08ee                  _PumpVoltageMonitor
-                    0x08a2                  _PumpVoltageSensingTimer
-                    0x0b98                  _ROM_NO
-                    0x08f8                  _RXbuffer
-                    0x0874                  _SPIMeasure
+                    0x085a                  _PulseCounter
+                    0x08da                  _Pulse_Off_Time
+                    0x08d8                  _Pulse_On_Time
+                    0x08e6                  _PumpTimer
+                    0x08e4                  _PumpVoltage
+                    0x08f2                  _PumpVoltageMonitor
+                    0x08a6                  _PumpVoltageSensingTimer
+                    0x0b9c                  _ROM_NO
+                    0x08fc                  _RXbuffer
+                    0x0878                  _SPIMeasure
                     0x0816                  _Setpoint
                     0x2bf0                  _Spi1RxBuff
                     0x2be0                  _Spi1TxBuff
-                    0x08e4                  _SpiTimeout
-                    0x086c                  _StoredCheckSum
-                    0x08b8                  _StoredTECValue
-                    0x08d2                  _SystemState
-                    0x08f4                  _SystemStateToUpdate
+                    0x08e8                  _SpiTimeout
+                    0x0870                  _StoredCheckSum
+                    0x08bc                  _StoredTECValue
+                    0x08d6                  _SystemState
+                    0x08f8                  _SystemStateToUpdate
                     0x084c                  _TA1
                     0x084d                  _TA2
                     0x0802                  _TECVoltage
-                    0x09f8                  _TXbuffer
+                    0x09fc                  _TXbuffer
                     0x0830                  _TecCurrentMonoitor
-                    0x08a0                  _TecPidTimer
-                    0x0bde                  _TecTemperature
+                    0x08a4                  _TecPidTimer
+                    0x0be2                  _TecTemperature
                     0x082e                  _TecVoltageMonitor
-                    0x08a4                  _TecVoltageSensingTimer
-                    0x08ea                  _TemperatureAdSamplingCounter
+                    0x08a8                  _TecVoltageSensingTimer
+                    0x08ee                  _TemperatureAdSamplingCounter
                     0x084a                  _TipSensFailed
-                    0x08b2                  _Trigger
-                    0x08b4                  _TriggerCounter
-                    0x0be8                  _WaterTemperature
+                    0x08b6                  _Trigger
+                    0x08b8                  _TriggerCounter
+                    0x0bec                  _WaterTemperature
                     0x083c                  _WritePulseCounterTimer
-                    0x08ac                  _appShortTimeOut
-                    0x089c                  _cnt100uS
-                    0x089e                  _cntSPIMeasure
+                    0x08b0                  _appShortTimeOut
+                    0x08a0                  _cnt100uS
+                    0x08a2                  _cntSPIMeasure
                     0x0844                  _crc8
-                    0x08aa                  _current_app_short_tasks
-                    0x0882                  _current_capacitors_bank_task
-                    0x0870                  _current_diode_mode_task
-                    0x08c8                  _current_discharge_task
-                    0x08e6                  _current_fan_task
-                    0x08c4                  _current_interlock_task
-                    0x08cc                  _current_lddriver_task
-                    0x08b6                  _current_lihgtguide_short_tasks
-                    0x086e                  _current_pulse_fire_task
-                    0x08ec                  _current_pump_task
+                    0x08ae                  _current_app_short_tasks
+                    0x0886                  _current_capacitors_bank_task
+                    0x0874                  _current_diode_mode_task
+                    0x08cc                  _current_discharge_task
+                    0x08ea                  _current_fan_task
+                    0x08c8                  _current_interlock_task
+                    0x08d0                  _current_lddriver_task
+                    0x08ba                  _current_lihgtguide_short_tasks
+                    0x0872                  _current_pulse_fire_task
+                    0x08f0                  _current_pump_task
                     0x0804                  _current_tec_task
                     0x0832                  _current_tip_task
-                    0x08b0                  _current_trigger_task
+                    0x08b4                  _current_trigger_task
                     0x081a                  _errSum
-                    0x08d8                  _indxRXbuffer
-                    0x08d9                  _indxTXbuff
+                    0x08dc                  _indxRXbuffer
+                    0x08dd                  _indxTXbuff
                     0x0800                  _indxTecTemperature
-                    0x08e8                  _indxWaterTemperature
+                    0x08ec                  _indxWaterTemperature
                     0x082a                  _kd
                     0x0826                  _ki
                     0x0822                  _kp
                     0x081e                  _lastErr
                     0x080a                  _lastTime
-                    0x0872                  _offTimeCntr
+                    0x0876                  _offTimeCntr
                     0x0850                  _pntrID
                     0x0846                  _pntrIDApp
                     0x0848                  _pntrIDLg
                     0x0806                  _tVal
-                    0x08dc                  _tx100uS
+                    0x08e0                  _tx100uS
 
 External Symbols in Program Memory (by address):
 
@@ -432,180 +436,182 @@ External Symbols in Program Memory (by address):
                   0x00120a                  __DefaultInterrupt
                   0x00122a                  __T1Interrupt
                   0x0012dc                  __T2Interrupt
-                  0x00131a                  __T4Interrupt
-                  0x001336                  __U1RXInterrupt
-                  0x0013ea                  __U1TXInterrupt
-                  0x00143a                  __DMA0Interrupt
-                  0x001442                  __DMA1Interrupt
-                  0x001452                  __SPI1Interrupt
-                  0x001482                  __ADCP0Interrupt
-                  0x0014ba                  __ADCP1Interrupt
-                  0x0014e4                  __ADCP2Interrupt
-                  0x00151e                  ___subsf3
-                  0x001520                  ___addsf3
-                  0x0015da                  ___divsf3
-                  0x00165e                  ___ltsf2
-                  0x00165e                  ___lesf2
-                  0x00165e                  ___eqsf2
-                  0x001662                  ___gtsf2
-                  0x001662                  ___gesf2
-                  0x001666                  ___fixsfsi
-                  0x0016a8                  ___fixunssfsi
-                  0x0016de                  ___floatunsisf
-                  0x0016e2                  __fpack
-                  0x00172e                  __funpack
-                  0x001758                  __funpack2
-                  0x001768                  __fPropagateNaN
-                  0x00177a                  __fbopExit
-                  0x001782                  __fbopReturnNaN
-                  0x001788                  ___mulsf3
-                  0x0017f0                  ___udivsi3
-                  0x001810                  __fcompare
-                  0x001846                  ___floatundisf
-                  0x001a3c                  _tip_tasks
-                  0x001eb6                  _ReadChipIdData
-                  0x0021a0                  _OWSearch
-                  0x0022ce                  _drive_OW_low
-                  0x0022d8                  _drive_OW_high
-                  0x0022e2                  _read_OW
-                  0x002304                  _OW_reset_pulse
-                  0x002322                  _OW_write_bit
-                  0x00234a                  _OW_read_bit
-                  0x002366                  _OW_write_byte
-                  0x00238a                  _OW_read_byte
-                  0x0023ba                  _Delay_uSxN
-                  0x0023e0                  _MemorySelfTest
-                  0x002678                  _InitApp
-                  0x002994                  _SPIReadWriteWord
-                  0x0029b4                  _SystemCheck
-                  0x0029d8                  _system_state_tasks
-                  0x002b5a                  _PowerDeliverySystemOff
-                  0x002b76                  _diode_mode_tasks
-                  0x002c22                  _pulse_fire_tasks
-                  0x002ce0                  _measurments_tasks
-                  0x002f2e                  _comm_tasks
-                  0x002fae                  _SendFrame
-                  0x002fde                  _TxFrameCheckSum
-                  0x003010                  _RxFrameCheckSum
-                  0x003042                  _ExecuteReceivedCommand
-                  0x003400                  _tec_tasks
-                  0x00369c                  _PidCompute
-                  0x003748                  _SetTECVoltage
-                  0x0037c2                  _GetTemperatureFromTable
-                  0x0038ae                  _fan_tasks
-                  0x003bc6                  _lihgtguide_short_task
-                  0x003c8c                  _app_short_tasks
-                  0x003d44                  _trigger_tasks
-                  0x003eae                  _SetPumpVoltage
-                  0x003eec                  _pump_tasks
-                  0x004082                  _PumpFault
-                  0x0040a0                  _SetChargeVoltage
-                  0x0040d4                  _capacitors_bank_tasks
-                  0x0041f6                  _LDDriver_tasks
-                  0x004220                  _SetDriverCurrent
-                  0x00425a                  _discharge_tasks
-                  0x004296                  _interlock_tasks
-                  0x0043e0                  _ConfigureOscillator
-                  0x004418                  _main
+                  0x001320                  __T3Interrupt
+                  0x001354                  __T4Interrupt
+                  0x001370                  __U1RXInterrupt
+                  0x001424                  __U1TXInterrupt
+                  0x001474                  __DMA0Interrupt
+                  0x00147c                  __DMA1Interrupt
+                  0x00148c                  __SPI1Interrupt
+                  0x0014bc                  __ADCP0Interrupt
+                  0x0014f4                  __ADCP1Interrupt
+                  0x00151e                  __ADCP2Interrupt
+                  0x001558                  ___subsf3
+                  0x00155a                  ___addsf3
+                  0x001614                  ___divsf3
+                  0x001698                  ___lesf2
+                  0x001698                  ___ltsf2
+                  0x001698                  ___eqsf2
+                  0x00169c                  ___gesf2
+                  0x00169c                  ___gtsf2
+                  0x0016a0                  ___fixsfsi
+                  0x0016e2                  ___fixunssfsi
+                  0x001718                  ___floatunsisf
+                  0x00171c                  __fpack
+                  0x001768                  __funpack
+                  0x001792                  __funpack2
+                  0x0017a2                  __fPropagateNaN
+                  0x0017b4                  __fbopExit
+                  0x0017bc                  __fbopReturnNaN
+                  0x0017c2                  ___mulsf3
+                  0x00182a                  ___udivsi3
+                  0x00184a                  __fcompare
+                  0x001880                  ___floatundisf
+                  0x001a9e                  _tip_tasks
+                  0x001f18                  _ReadChipIdData
+                  0x002202                  _OWSearch
+                  0x002330                  _drive_OW_low
+                  0x00233a                  _drive_OW_high
+                  0x002344                  _read_OW
+                  0x002366                  _OW_reset_pulse
+                  0x002384                  _OW_write_bit
+                  0x0023ac                  _OW_read_bit
+                  0x0023c8                  _OW_write_byte
+                  0x0023ec                  _OW_read_byte
+                  0x00241c                  _Delay_uSxN
+                  0x002442                  _MemorySelfTest
+                  0x0026da                  _InitApp
+                  0x002a0c                  _SPIReadWriteWord
+                  0x002a2c                  _SystemCheck
+                  0x002a50                  _system_state_tasks
+                  0x002be8                  _PowerDeliverySystemOff
+                  0x002c04                  _diode_mode_tasks
+                  0x002cb0                  _pulse_fire_tasks
+                  0x002d84                  _measurments_tasks
+                  0x002fd2                  _comm_tasks
+                  0x003052                  _SendFrame
+                  0x003082                  _TxFrameCheckSum
+                  0x0030b4                  _RxFrameCheckSum
+                  0x0030e6                  _ExecuteReceivedCommand
+                  0x003546                  _tec_tasks
+                  0x00383e                  _PidCompute
+                  0x0038ea                  _SetTECVoltage
+                  0x003964                  _GetTemperatureFromTable
+                  0x003a50                  _fan_tasks
+                  0x003d68                  _lihgtguide_short_task
+                  0x003e30                  _app_short_tasks
+                  0x003ee8                  _trigger_tasks
+                  0x004072                  _SetPumpVoltage
+                  0x0040b0                  _pump_tasks
+                  0x004290                  _PumpFault
+                  0x0042ae                  _SetChargeVoltage
+                  0x0042e2                  _capacitors_bank_tasks
+                  0x004404                  _LDDriver_tasks
+                  0x00442e                  _SetDriverCurrent
+                  0x004468                  _discharge_tasks
+                  0x0044a4                  _interlock_tasks
+                  0x0045ee                  _ConfigureOscillator
+                  0x004626                  _main
                   0xf80000                  __FBS.sec
                   0xf80004                  __FGS.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x0043e0                  _ConfigureOscillator
-                  0x0023ba                  _Delay_uSxN
-                  0x003042                  _ExecuteReceivedCommand
-                  0x0037c2                  _GetTemperatureFromTable
-                  0x002678                  _InitApp
-                  0x0041f6                  _LDDriver_tasks
-                  0x0023e0                  _MemorySelfTest
-                  0x0021a0                  _OWSearch
-                  0x00234a                  _OW_read_bit
-                  0x00238a                  _OW_read_byte
-                  0x002304                  _OW_reset_pulse
-                  0x002322                  _OW_write_bit
-                  0x002366                  _OW_write_byte
-                  0x00369c                  _PidCompute
-                  0x002b5a                  _PowerDeliverySystemOff
-                  0x004082                  _PumpFault
-                  0x001eb6                  _ReadChipIdData
-                  0x003010                  _RxFrameCheckSum
-                  0x002994                  _SPIReadWriteWord
-                  0x002fae                  _SendFrame
-                  0x0040a0                  _SetChargeVoltage
-                  0x004220                  _SetDriverCurrent
-                  0x003eae                  _SetPumpVoltage
-                  0x003748                  _SetTECVoltage
-                  0x0029b4                  _SystemCheck
-                  0x002fde                  _TxFrameCheckSum
-                  0x001482                  __ADCP0Interrupt
-                  0x0014ba                  __ADCP1Interrupt
-                  0x0014e4                  __ADCP2Interrupt
+                  0x0045ee                  _ConfigureOscillator
+                  0x00241c                  _Delay_uSxN
+                  0x0030e6                  _ExecuteReceivedCommand
+                  0x003964                  _GetTemperatureFromTable
+                  0x0026da                  _InitApp
+                  0x004404                  _LDDriver_tasks
+                  0x002442                  _MemorySelfTest
+                  0x002202                  _OWSearch
+                  0x0023ac                  _OW_read_bit
+                  0x0023ec                  _OW_read_byte
+                  0x002366                  _OW_reset_pulse
+                  0x002384                  _OW_write_bit
+                  0x0023c8                  _OW_write_byte
+                  0x00383e                  _PidCompute
+                  0x002be8                  _PowerDeliverySystemOff
+                  0x004290                  _PumpFault
+                  0x001f18                  _ReadChipIdData
+                  0x0030b4                  _RxFrameCheckSum
+                  0x002a0c                  _SPIReadWriteWord
+                  0x003052                  _SendFrame
+                  0x0042ae                  _SetChargeVoltage
+                  0x00442e                  _SetDriverCurrent
+                  0x004072                  _SetPumpVoltage
+                  0x0038ea                  _SetTECVoltage
+                  0x002a2c                  _SystemCheck
+                  0x003082                  _TxFrameCheckSum
+                  0x0014bc                  __ADCP0Interrupt
+                  0x0014f4                  __ADCP1Interrupt
+                  0x00151e                  __ADCP2Interrupt
                   0x0010ea                  __AddressError
                   0x00118a                  __AltAddressError
                   0x0011ea                  __AltDMACError
                   0x0011ca                  __AltMathError
                   0x00116a                  __AltOscillatorFail
                   0x0011aa                  __AltStackError
-                  0x00143a                  __DMA0Interrupt
-                  0x001442                  __DMA1Interrupt
+                  0x001474                  __DMA0Interrupt
+                  0x00147c                  __DMA1Interrupt
                   0x00114a                  __DMACError
                   0x00120a                  __DefaultInterrupt
                   0xf80000                  __FBS.sec
                   0xf80004                  __FGS.sec
                   0x00112a                  __MathError
                   0x0010ca                  __OscillatorFail
-                  0x001452                  __SPI1Interrupt
+                  0x00148c                  __SPI1Interrupt
                   0x00110a                  __StackError
                   0x00122a                  __T1Interrupt
                   0x0012dc                  __T2Interrupt
-                  0x00131a                  __T4Interrupt
-                  0x001336                  __U1RXInterrupt
-                  0x0013ea                  __U1TXInterrupt
-                  0x001520                  ___addsf3
-                  0x0015da                  ___divsf3
-                  0x00165e                  ___eqsf2
-                  0x001666                  ___fixsfsi
-                  0x0016a8                  ___fixunssfsi
-                  0x001846                  ___floatundisf
-                  0x0016de                  ___floatunsisf
-                  0x001662                  ___gesf2
-                  0x001662                  ___gtsf2
-                  0x00165e                  ___lesf2
-                  0x00165e                  ___ltsf2
-                  0x001788                  ___mulsf3
-                  0x00151e                  ___subsf3
-                  0x0017f0                  ___udivsi3
+                  0x001320                  __T3Interrupt
+                  0x001354                  __T4Interrupt
+                  0x001370                  __U1RXInterrupt
+                  0x001424                  __U1TXInterrupt
+                  0x00155a                  ___addsf3
+                  0x001614                  ___divsf3
+                  0x001698                  ___eqsf2
+                  0x0016a0                  ___fixsfsi
+                  0x0016e2                  ___fixunssfsi
+                  0x001880                  ___floatundisf
+                  0x001718                  ___floatunsisf
+                  0x00169c                  ___gesf2
+                  0x00169c                  ___gtsf2
+                  0x001698                  ___lesf2
+                  0x001698                  ___ltsf2
+                  0x0017c2                  ___mulsf3
+                  0x001558                  ___subsf3
+                  0x00182a                  ___udivsi3
                   0x001054                  __data_init
                   0x001054                  __data_init_standard
-                  0x001768                  __fPropagateNaN
-                  0x00177a                  __fbopExit
-                  0x001782                  __fbopReturnNaN
-                  0x001810                  __fcompare
-                  0x0016e2                  __fpack
-                  0x00172e                  __funpack
-                  0x001758                  __funpack2
+                  0x0017a2                  __fPropagateNaN
+                  0x0017b4                  __fbopExit
+                  0x0017bc                  __fbopReturnNaN
+                  0x00184a                  __fcompare
+                  0x00171c                  __fpack
+                  0x001768                  __funpack
+                  0x001792                  __funpack2
                   0x00103e                  __psv_init
                   0x001002                  __resetPRI
-                  0x003c8c                  _app_short_tasks
-                  0x0040d4                  _capacitors_bank_tasks
-                  0x002f2e                  _comm_tasks
-                  0x002b76                  _diode_mode_tasks
-                  0x00425a                  _discharge_tasks
-                  0x0022d8                  _drive_OW_high
-                  0x0022ce                  _drive_OW_low
-                  0x0038ae                  _fan_tasks
-                  0x004296                  _interlock_tasks
-                  0x003bc6                  _lihgtguide_short_task
-                  0x004418                  _main
-                  0x002ce0                  _measurments_tasks
-                  0x002c22                  _pulse_fire_tasks
-                  0x003eec                  _pump_tasks
-                  0x0022e2                  _read_OW
-                  0x0029d8                  _system_state_tasks
-                  0x003400                  _tec_tasks
-                  0x001a3c                  _tip_tasks
-                  0x003d44                  _trigger_tasks
+                  0x003e30                  _app_short_tasks
+                  0x0042e2                  _capacitors_bank_tasks
+                  0x002fd2                  _comm_tasks
+                  0x002c04                  _diode_mode_tasks
+                  0x004468                  _discharge_tasks
+                  0x00233a                  _drive_OW_high
+                  0x002330                  _drive_OW_low
+                  0x003a50                  _fan_tasks
+                  0x0044a4                  _interlock_tasks
+                  0x003d68                  _lihgtguide_short_task
+                  0x004626                  _main
+                  0x002d84                  _measurments_tasks
+                  0x002cb0                  _pulse_fire_tasks
+                  0x0040b0                  _pump_tasks
+                  0x002344                  _read_OW
+                  0x002a50                  _system_state_tasks
+                  0x003546                  _tec_tasks
+                  0x001a9e                  _tip_tasks
+                  0x003ee8                  _trigger_tasks
 
 Memory Configuration
 
@@ -670,7 +676,7 @@ LOAD p33FJ64GS610
                   0x000002          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
                   0x000003          0x2 SHORT 0x0
 
-.text             0x001000        0x8a4
+.text             0x001000        0x8de
                   0x001000          0x2 SHORT 0xa
  *(.init)
  *fill*           0x001001          0x200
@@ -696,72 +702,73 @@ LOAD p33FJ64GS610
                   0x0011ca                  __AltMathError
                   0x0011ea                  __AltDMACError
                   0x00120a                  __DefaultInterrupt
- .isr.text        0x00122a        0x2f2 build/maincfg_xc_1_30/production/interrupts.o
+ .isr.text        0x00122a        0x32c build/maincfg_xc_1_30/production/interrupts.o
                   0x00122a                  __T1Interrupt
                   0x0012dc                  __T2Interrupt
-                  0x00131a                  __T4Interrupt
-                  0x001336                  __U1RXInterrupt
-                  0x0013ea                  __U1TXInterrupt
-                  0x00143a                  __DMA0Interrupt
-                  0x001442                  __DMA1Interrupt
-                  0x001452                  __SPI1Interrupt
-                  0x001482                  __ADCP0Interrupt
-                  0x0014ba                  __ADCP1Interrupt
-                  0x0014e4                  __ADCP2Interrupt
+                  0x001320                  __T3Interrupt
+                  0x001354                  __T4Interrupt
+                  0x001370                  __U1RXInterrupt
+                  0x001424                  __U1TXInterrupt
+                  0x001474                  __DMA0Interrupt
+                  0x00147c                  __DMA1Interrupt
+                  0x00148c                  __SPI1Interrupt
+                  0x0014bc                  __ADCP0Interrupt
+                  0x0014f4                  __ADCP1Interrupt
+                  0x00151e                  __ADCP2Interrupt
  *(.libc)
  *(.libm)
  *(.libdsp)
  *(.lib*)
  .libpic30_crt_start_mode
-                  0x00151c          0x2 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normal.Leo)
-                  0x00151c                  __crt_start_mode
-                  0x00151c                  __crt_start_mode_normal
- .libm.subsf3     0x00151e         0xbc c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(addsf3.eo)
-                  0x00151e                  ___subsf3
-                  0x001520                  ___addsf3
- .libm.divfs3     0x0015da         0x84 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(divsf3.eo)
-                  0x0015da                  ___divsf3
- .libm.eqsf2      0x00165e          0x4 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(feqltle.eo)
-                  0x00165e                  ___eqsf2
-                  0x00165e                  ___ltsf2
-                  0x00165e                  ___lesf2
- .libm.gtsf2      0x001662          0x4 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(fgtge.eo)
-                  0x001662                  ___gesf2
-                  0x001662                  ___gtsf2
- .libm.fixsfsi    0x001666         0x42 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(fixsfsi.eo)
-                  0x001666                  _(float, int, long long, short, float, short, int)
+                  0x001556          0x2 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normal.Leo)
+                  0x001556                  __crt_start_mode
+                  0x001556                  __crt_start_mode_normal
+ .libm.subsf3     0x001558         0xbc c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(addsf3.eo)
+                  0x001558                  ___subsf3
+                  0x00155a                  ___addsf3
+ .libm.divfs3     0x001614         0x84 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(divsf3.eo)
+                  0x001614                  ___divsf3
+ .libm.eqsf2      0x001698          0x4 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(feqltle.eo)
+                  0x001698                  ___eqsf2
+                  0x001698                  ___ltsf2
+                  0x001698                  ___lesf2
+ .libm.gtsf2      0x00169c          0x4 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(fgtge.eo)
+                  0x00169c                  ___gesf2
+                  0x00169c                  ___gtsf2
+ .libm.fixsfsi    0x0016a0         0x42 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(fixsfsi.eo)
+                  0x0016a0                  _(float, int, long long, short, float, short, int)
  .libm.fixunssfsi
-                  0x0016a8         0x36 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(fixunssfsi.eo)
-                  0x0016a8                  ___fixunssfsi
+                  0x0016e2         0x36 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(fixunssfsi.eo)
+                  0x0016e2                  ___fixunssfsi
  .libm.floatunsisf
-                  0x0016de          0x4 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(floatunsisf.eo)
-                  0x0016de                  ___floatunsisf
- .libm.fpack      0x0016e2         0x4c c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(fpack.eo)
-                  0x0016e2                  __fpack
- .libm.funpack    0x00172e         0x2a c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(funpack.eo)
-                  0x00172e                  __funpack
+                  0x001718          0x4 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(floatunsisf.eo)
+                  0x001718                  ___floatunsisf
+ .libm.fpack      0x00171c         0x4c c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(fpack.eo)
+                  0x00171c                  __fpack
+ .libm.funpack    0x001768         0x2a c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(funpack.eo)
+                  0x001768                  __funpack
  .libm.funpack2
-                  0x001758         0x10 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(funpack2.eo)
-                  0x001758                  __funpack2
+                  0x001792         0x10 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(funpack2.eo)
+                  0x001792                  __funpack2
  .libm.fPropagateNaN
-                  0x001768         0x12 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(futil.eo)
-                  0x001768                  __fPropagateNaN
+                  0x0017a2         0x12 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(futil.eo)
+                  0x0017a2                  __fPropagateNaN
  .libm.fbobExit
-                  0x00177a          0x8 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(futil.eo)
-                  0x00177a                  __fbopExit
+                  0x0017b4          0x8 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(futil.eo)
+                  0x0017b4                  __fbopExit
  .libm.fbopReturnNaN
-                  0x001782          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(futil.eo)
-                  0x001782                  __fbopReturnNaN
- .libm.mulsf3     0x001788         0x68 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(mulsf3.eo)
-                  0x001788                  ___mulsf3
- .libm.udivsi3    0x0017f0         0x20 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
-                  0x0017f0                  ___udivsi3
+                  0x0017bc          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(futil.eo)
+                  0x0017bc                  __fbopReturnNaN
+ .libm.mulsf3     0x0017c2         0x68 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(mulsf3.eo)
+                  0x0017c2                  ___mulsf3
+ .libm.udivsi3    0x00182a         0x20 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
+                  0x00182a                  ___udivsi3
  .libm.fcompare
-                  0x001810         0x36 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(fcompare.eo)
-                  0x001810                  __fcompare
+                  0x00184a         0x36 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(fcompare.eo)
+                  0x00184a                  __fcompare
  .libm.floatundisf
-                  0x001846         0x5e c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(floatundisf.eo)
-                  0x001846                  ___floatundisf
+                  0x001880         0x5e c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(floatundisf.eo)
+                  0x001880                  ___floatundisf
 
 usercode
  *(usercode)
@@ -797,62 +804,62 @@ __FCMP
 .comment
  *(.comment)
 
-.debug_info       0x000000      0x10662
+.debug_info       0x000000      0x10bc1
  *(.debug_info)
  .debug_info      0x000000        0x2fa build/maincfg_xc_1_30/production/main.o
  .debug_info      0x0002fa        0x627 build/maincfg_xc_1_30/production/system.o
- .debug_info      0x000921        0xd44 build/maincfg_xc_1_30/production/tec.o
- .debug_info      0x001665       0x1303 build/maincfg_xc_1_30/production/tip.o
- .debug_info      0x002968        0x6e4 build/maincfg_xc_1_30/production/traps.o
- .debug_info      0x00304c        0x94c build/maincfg_xc_1_30/production/pump.o
- .debug_info      0x003998        0x739 build/maincfg_xc_1_30/production/fan.o
- .debug_info      0x0040d1       0x1df6 build/maincfg_xc_1_30/production/control.o
- .debug_info      0x005ec7       0x10b0 build/maincfg_xc_1_30/production/comm.o
- .debug_info      0x006f77         0xe0 build/maincfg_xc_1_30/production/configuration_bits.o
- .debug_info      0x007057        0xab7 build/maincfg_xc_1_30/production/consol.o
- .debug_info      0x007b0e        0x884 build/maincfg_xc_1_30/production/capbank.o
- .debug_info      0x008392        0xa81 build/maincfg_xc_1_30/production/applicator.o
- .debug_info      0x008e13       0x5633 build/maincfg_xc_1_30/production/user.o
- .debug_info      0x00e446       0x221c build/maincfg_xc_1_30/production/interrupts.o
+ .debug_info      0x000921        0xd64 build/maincfg_xc_1_30/production/tec.o
+ .debug_info      0x001685       0x1323 build/maincfg_xc_1_30/production/tip.o
+ .debug_info      0x0029a8        0x6e4 build/maincfg_xc_1_30/production/traps.o
+ .debug_info      0x00308c        0x94f build/maincfg_xc_1_30/production/pump.o
+ .debug_info      0x0039db        0x73c build/maincfg_xc_1_30/production/fan.o
+ .debug_info      0x004117       0x1f5f build/maincfg_xc_1_30/production/control.o
+ .debug_info      0x006076       0x1108 build/maincfg_xc_1_30/production/comm.o
+ .debug_info      0x00717e         0xe0 build/maincfg_xc_1_30/production/configuration_bits.o
+ .debug_info      0x00725e        0xaba build/maincfg_xc_1_30/production/consol.o
+ .debug_info      0x007d18        0x887 build/maincfg_xc_1_30/production/capbank.o
+ .debug_info      0x00859f        0xaa1 build/maincfg_xc_1_30/production/applicator.o
+ .debug_info      0x009040       0x57a7 build/maincfg_xc_1_30/production/user.o
+ .debug_info      0x00e7e7       0x23da build/maincfg_xc_1_30/production/interrupts.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000       0x10fd
+.debug_abbrev     0x000000       0x1138
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0x8c build/maincfg_xc_1_30/production/main.o
  .debug_abbrev    0x00008c         0xb8 build/maincfg_xc_1_30/production/system.o
- .debug_abbrev    0x000144        0x142 build/maincfg_xc_1_30/production/tec.o
- .debug_abbrev    0x000286        0x1e2 build/maincfg_xc_1_30/production/tip.o
- .debug_abbrev    0x000468         0x7d build/maincfg_xc_1_30/production/traps.o
- .debug_abbrev    0x0004e5        0x116 build/maincfg_xc_1_30/production/pump.o
- .debug_abbrev    0x0005fb        0x13f build/maincfg_xc_1_30/production/fan.o
- .debug_abbrev    0x00073a        0x17a build/maincfg_xc_1_30/production/control.o
- .debug_abbrev    0x0008b4        0x1ab build/maincfg_xc_1_30/production/comm.o
- .debug_abbrev    0x000a5f         0x1f build/maincfg_xc_1_30/production/configuration_bits.o
- .debug_abbrev    0x000a7e        0x107 build/maincfg_xc_1_30/production/consol.o
- .debug_abbrev    0x000b85        0x118 build/maincfg_xc_1_30/production/capbank.o
- .debug_abbrev    0x000c9d         0xf2 build/maincfg_xc_1_30/production/applicator.o
- .debug_abbrev    0x000d8f        0x1f4 build/maincfg_xc_1_30/production/user.o
- .debug_abbrev    0x000f83        0x17a build/maincfg_xc_1_30/production/interrupts.o
+ .debug_abbrev    0x000144        0x153 build/maincfg_xc_1_30/production/tec.o
+ .debug_abbrev    0x000297        0x1e2 build/maincfg_xc_1_30/production/tip.o
+ .debug_abbrev    0x000479         0x7d build/maincfg_xc_1_30/production/traps.o
+ .debug_abbrev    0x0004f6        0x116 build/maincfg_xc_1_30/production/pump.o
+ .debug_abbrev    0x00060c        0x12e build/maincfg_xc_1_30/production/fan.o
+ .debug_abbrev    0x00073a        0x18f build/maincfg_xc_1_30/production/control.o
+ .debug_abbrev    0x0008c9        0x1ab build/maincfg_xc_1_30/production/comm.o
+ .debug_abbrev    0x000a74         0x1f build/maincfg_xc_1_30/production/configuration_bits.o
+ .debug_abbrev    0x000a93        0x107 build/maincfg_xc_1_30/production/consol.o
+ .debug_abbrev    0x000b9a        0x118 build/maincfg_xc_1_30/production/capbank.o
+ .debug_abbrev    0x000cb2        0x103 build/maincfg_xc_1_30/production/applicator.o
+ .debug_abbrev    0x000db5        0x1f4 build/maincfg_xc_1_30/production/user.o
+ .debug_abbrev    0x000fa9        0x18f build/maincfg_xc_1_30/production/interrupts.o
 
-.debug_line       0x000000       0x11b4
+.debug_line       0x000000       0x1217
  *(.debug_line)
  .debug_line      0x000000         0xf2 build/maincfg_xc_1_30/production/main.o
  .debug_line      0x0000f2         0xa1 build/maincfg_xc_1_30/production/system.o
- .debug_line      0x000193        0x151 build/maincfg_xc_1_30/production/tec.o
- .debug_line      0x0002e4        0x23e build/maincfg_xc_1_30/production/tip.o
- .debug_line      0x000522         0xc2 build/maincfg_xc_1_30/production/traps.o
- .debug_line      0x0005e4        0x11b build/maincfg_xc_1_30/production/pump.o
- .debug_line      0x0006ff        0x10a build/maincfg_xc_1_30/production/fan.o
- .debug_line      0x000809        0x1cf build/maincfg_xc_1_30/production/control.o
- .debug_line      0x0009d8        0x153 build/maincfg_xc_1_30/production/comm.o
- .debug_line      0x000b2b         0x1a build/maincfg_xc_1_30/production/configuration_bits.o
- .debug_line      0x000b45         0xef build/maincfg_xc_1_30/production/consol.o
- .debug_line      0x000c34         0xfd build/maincfg_xc_1_30/production/capbank.o
- .debug_line      0x000d31        0x150 build/maincfg_xc_1_30/production/applicator.o
- .debug_line      0x000e81        0x215 build/maincfg_xc_1_30/production/user.o
- .debug_line      0x001096        0x11e build/maincfg_xc_1_30/production/interrupts.o
+ .debug_line      0x000193        0x15a build/maincfg_xc_1_30/production/tec.o
+ .debug_line      0x0002ed        0x23e build/maincfg_xc_1_30/production/tip.o
+ .debug_line      0x00052b         0xc2 build/maincfg_xc_1_30/production/traps.o
+ .debug_line      0x0005ed        0x12a build/maincfg_xc_1_30/production/pump.o
+ .debug_line      0x000717        0x10a build/maincfg_xc_1_30/production/fan.o
+ .debug_line      0x000821        0x1df build/maincfg_xc_1_30/production/control.o
+ .debug_line      0x000a00        0x16e build/maincfg_xc_1_30/production/comm.o
+ .debug_line      0x000b6e         0x1a build/maincfg_xc_1_30/production/configuration_bits.o
+ .debug_line      0x000b88         0xef build/maincfg_xc_1_30/production/consol.o
+ .debug_line      0x000c77         0xff build/maincfg_xc_1_30/production/capbank.o
+ .debug_line      0x000d76        0x155 build/maincfg_xc_1_30/production/applicator.o
+ .debug_line      0x000ecb        0x21b build/maincfg_xc_1_30/production/user.o
+ .debug_line      0x0010e6        0x131 build/maincfg_xc_1_30/production/interrupts.o
 
-.debug_frame      0x000000        0x992
+.debug_frame      0x000000        0x9b6
  *(.debug_frame)
  .debug_frame     0x000000         0x30 build/maincfg_xc_1_30/production/main.o
  .debug_frame     0x000030         0x30 build/maincfg_xc_1_30/production/system.o
@@ -867,9 +874,9 @@ __FCMP
  .debug_frame     0x0006a2         0x4c build/maincfg_xc_1_30/production/capbank.o
  .debug_frame     0x0006ee         0x68 build/maincfg_xc_1_30/production/applicator.o
  .debug_frame     0x000756         0x68 build/maincfg_xc_1_30/production/user.o
- .debug_frame     0x0007be        0x1d4 build/maincfg_xc_1_30/production/interrupts.o
+ .debug_frame     0x0007be        0x1f8 build/maincfg_xc_1_30/production/interrupts.o
 
-.debug_str        0x000000        0xed1
+.debug_str        0x000000        0xf65
  *(.debug_str)
  .debug_str       0x000000          0x9 build/maincfg_xc_1_30/production/main.o
  .debug_str       0x000009         0x20 build/maincfg_xc_1_30/production/system.o
@@ -878,13 +885,13 @@ __FCMP
  .debug_str       0x00025c         0x1e build/maincfg_xc_1_30/production/traps.o
  .debug_str       0x00027a         0xb0 build/maincfg_xc_1_30/production/pump.o
  .debug_str       0x00032a         0x96 build/maincfg_xc_1_30/production/fan.o
- .debug_str       0x0003c0        0x257 build/maincfg_xc_1_30/production/control.o
- .debug_str       0x000617        0x1a6 build/maincfg_xc_1_30/production/comm.o
- .debug_str       0x0007bd         0xb4 build/maincfg_xc_1_30/production/consol.o
- .debug_str       0x000871         0x99 build/maincfg_xc_1_30/production/capbank.o
- .debug_str       0x00090a         0xd5 build/maincfg_xc_1_30/production/applicator.o
- .debug_str       0x0009df        0x234 build/maincfg_xc_1_30/production/user.o
- .debug_str       0x000c13        0x2be build/maincfg_xc_1_30/production/interrupts.o
+ .debug_str       0x0003c0        0x27d build/maincfg_xc_1_30/production/control.o
+ .debug_str       0x00063d        0x1c3 build/maincfg_xc_1_30/production/comm.o
+ .debug_str       0x000800         0xb4 build/maincfg_xc_1_30/production/consol.o
+ .debug_str       0x0008b4         0x99 build/maincfg_xc_1_30/production/capbank.o
+ .debug_str       0x00094d         0xd5 build/maincfg_xc_1_30/production/applicator.o
+ .debug_str       0x000a22        0x250 build/maincfg_xc_1_30/production/user.o
+ .debug_str       0x000c72        0x2f3 build/maincfg_xc_1_30/production/interrupts.o
 
 .debug_loc
  *(.debug_loc)
@@ -893,7 +900,7 @@ __FCMP
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0xea2
+                  0x000000        0xed8
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000         0x1b build/maincfg_xc_1_30/production/main.o
@@ -920,9 +927,9 @@ __FCMP
  .debug_pubnames
                   0x000ab9         0xf8 build/maincfg_xc_1_30/production/applicator.o
  .debug_pubnames
-                  0x000bb1        0x146 build/maincfg_xc_1_30/production/user.o
+                  0x000bb1        0x16b build/maincfg_xc_1_30/production/user.o
  .debug_pubnames
-                  0x000cf7        0x1ab build/maincfg_xc_1_30/production/interrupts.o
+                  0x000d1c        0x1bc build/maincfg_xc_1_30/production/interrupts.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -971,17 +978,17 @@ __FCMP
                   0x000016          0x4 LONG 0x120a DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000018          0x4 LONG 0x120a DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00001a          0x4 LONG 0x122a DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00001c          0x4 LONG 0x143a DEFINED (__DMA0Interrupt)?ABSOLUTE (__DMA0Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00001c          0x4 LONG 0x1474 DEFINED (__DMA0Interrupt)?ABSOLUTE (__DMA0Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00001e          0x4 LONG 0x120a DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000020          0x4 LONG 0x120a DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000022          0x4 LONG 0x12dc DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000024          0x4 LONG 0x120a DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000024          0x4 LONG 0x1320 DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000026          0x4 LONG 0x120a DEFINED (__SPI1ErrInterrupt)?ABSOLUTE (__SPI1ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000028          0x4 LONG 0x1452 DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00002a          0x4 LONG 0x1336 DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00002c          0x4 LONG 0x13ea DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000028          0x4 LONG 0x148c DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00002a          0x4 LONG 0x1370 DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00002c          0x4 LONG 0x1424 DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00002e          0x4 LONG 0x120a DEFINED (__ADCInterrupt)?ABSOLUTE (__ADCInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000030          0x4 LONG 0x1442 DEFINED (__DMA1Interrupt)?ABSOLUTE (__DMA1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000030          0x4 LONG 0x147c DEFINED (__DMA1Interrupt)?ABSOLUTE (__DMA1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000032          0x4 LONG 0x120a DEFINED (__Interrupt15)?ABSOLUTE (__Interrupt15):ABSOLUTE (__DefaultInterrupt)
                   0x000034          0x4 LONG 0x120a DEFINED (__SI2C1Interrupt)?ABSOLUTE (__SI2C1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000036          0x4 LONG 0x120a DEFINED (__MI2C1Interrupt)?ABSOLUTE (__MI2C1Interrupt):ABSOLUTE (__DefaultInterrupt)
@@ -994,7 +1001,7 @@ __FCMP
                   0x000044          0x4 LONG 0x120a DEFINED (__DMA2Interrupt)?ABSOLUTE (__DMA2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000046          0x4 LONG 0x120a DEFINED (__OC3Interrupt)?ABSOLUTE (__OC3Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000048          0x4 LONG 0x120a DEFINED (__OC4Interrupt)?ABSOLUTE (__OC4Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00004a          0x4 LONG 0x131a DEFINED (__T4Interrupt)?ABSOLUTE (__T4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00004a          0x4 LONG 0x1354 DEFINED (__T4Interrupt)?ABSOLUTE (__T4Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00004c          0x4 LONG 0x120a DEFINED (__T5Interrupt)?ABSOLUTE (__T5Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00004e          0x4 LONG 0x120a DEFINED (__INT2Interrupt)?ABSOLUTE (__INT2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000050          0x4 LONG 0x120a DEFINED (__U2RXInterrupt)?ABSOLUTE (__U2RXInterrupt):ABSOLUTE (__DefaultInterrupt)
@@ -1077,9 +1084,9 @@ __FCMP
                   0x0000ea          0x4 LONG 0x120a DEFINED (__Interrupt107)?ABSOLUTE (__Interrupt107):ABSOLUTE (__DefaultInterrupt)
                   0x0000ec          0x4 LONG 0x120a DEFINED (__Interrupt108)?ABSOLUTE (__Interrupt108):ABSOLUTE (__DefaultInterrupt)
                   0x0000ee          0x4 LONG 0x120a DEFINED (__Interrupt109)?ABSOLUTE (__Interrupt109):ABSOLUTE (__DefaultInterrupt)
-                  0x0000f0          0x4 LONG 0x1482 DEFINED (__ADCP0Interrupt)?ABSOLUTE (__ADCP0Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x0000f2          0x4 LONG 0x14ba DEFINED (__ADCP1Interrupt)?ABSOLUTE (__ADCP1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x0000f4          0x4 LONG 0x14e4 DEFINED (__ADCP2Interrupt)?ABSOLUTE (__ADCP2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000f0          0x4 LONG 0x14bc DEFINED (__ADCP0Interrupt)?ABSOLUTE (__ADCP0Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000f2          0x4 LONG 0x14f4 DEFINED (__ADCP1Interrupt)?ABSOLUTE (__ADCP1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000f4          0x4 LONG 0x151e DEFINED (__ADCP2Interrupt)?ABSOLUTE (__ADCP2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x0000f6          0x4 LONG 0x120a DEFINED (__ADCP3Interrupt)?ABSOLUTE (__ADCP3Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x0000f8          0x4 LONG 0x120a DEFINED (__ADCP4Interrupt)?ABSOLUTE (__ADCP4Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x0000fa          0x4 LONG 0x120a DEFINED (__ADCP5Interrupt)?ABSOLUTE (__ADCP5Interrupt):ABSOLUTE (__DefaultInterrupt)
@@ -1099,17 +1106,17 @@ __FCMP
                   0x000116          0x4 LONG 0x120a DEFINED (__AltIC1Interrupt)?ABSOLUTE (__AltIC1Interrupt):DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000118          0x4 LONG 0x120a DEFINED (__AltOC1Interrupt)?ABSOLUTE (__AltOC1Interrupt):DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00011a          0x4 LONG 0x122a DEFINED (__AltT1Interrupt)?ABSOLUTE (__AltT1Interrupt):DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00011c          0x4 LONG 0x143a DEFINED (__AltDMA0Interrupt)?ABSOLUTE (__AltDMA0Interrupt):DEFINED (__DMA0Interrupt)?ABSOLUTE (__DMA0Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00011c          0x4 LONG 0x1474 DEFINED (__AltDMA0Interrupt)?ABSOLUTE (__AltDMA0Interrupt):DEFINED (__DMA0Interrupt)?ABSOLUTE (__DMA0Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00011e          0x4 LONG 0x120a DEFINED (__AltIC2Interrupt)?ABSOLUTE (__AltIC2Interrupt):DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000120          0x4 LONG 0x120a DEFINED (__AltOC2Interrupt)?ABSOLUTE (__AltOC2Interrupt):DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000122          0x4 LONG 0x12dc DEFINED (__AltT2Interrupt)?ABSOLUTE (__AltT2Interrupt):DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000124          0x4 LONG 0x120a DEFINED (__AltT3Interrupt)?ABSOLUTE (__AltT3Interrupt):DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000124          0x4 LONG 0x1320 DEFINED (__AltT3Interrupt)?ABSOLUTE (__AltT3Interrupt):DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000126          0x4 LONG 0x120a DEFINED (__AltSPI1ErrInterrupt)?ABSOLUTE (__AltSPI1ErrInterrupt):DEFINED (__SPI1ErrInterrupt)?ABSOLUTE (__SPI1ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000128          0x4 LONG 0x1452 DEFINED (__AltSPI1Interrupt)?ABSOLUTE (__AltSPI1Interrupt):DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00012a          0x4 LONG 0x1336 DEFINED (__AltU1RXInterrupt)?ABSOLUTE (__AltU1RXInterrupt):DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00012c          0x4 LONG 0x13ea DEFINED (__AltU1TXInterrupt)?ABSOLUTE (__AltU1TXInterrupt):DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000128          0x4 LONG 0x148c DEFINED (__AltSPI1Interrupt)?ABSOLUTE (__AltSPI1Interrupt):DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00012a          0x4 LONG 0x1370 DEFINED (__AltU1RXInterrupt)?ABSOLUTE (__AltU1RXInterrupt):DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00012c          0x4 LONG 0x1424 DEFINED (__AltU1TXInterrupt)?ABSOLUTE (__AltU1TXInterrupt):DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00012e          0x4 LONG 0x120a DEFINED (__AltADCInterrupt)?ABSOLUTE (__AltADCInterrupt):DEFINED (__ADCInterrupt)?ABSOLUTE (__ADCInterrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x000130          0x4 LONG 0x1442 DEFINED (__AltDMA1Interrupt)?ABSOLUTE (__AltDMA1Interrupt):DEFINED (__DMA1Interrupt)?ABSOLUTE (__DMA1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000130          0x4 LONG 0x147c DEFINED (__AltDMA1Interrupt)?ABSOLUTE (__AltDMA1Interrupt):DEFINED (__DMA1Interrupt)?ABSOLUTE (__DMA1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000132          0x4 LONG 0x120a DEFINED (__AltInterrupt15)?ABSOLUTE (__AltInterrupt15):DEFINED (__Interrupt15)?ABSOLUTE (__Interrupt15):ABSOLUTE (__DefaultInterrupt)
                   0x000134          0x4 LONG 0x120a DEFINED (__AltSI2C1Interrupt)?ABSOLUTE (__AltSI2C1Interrupt):DEFINED (__SI2C1Interrupt)?ABSOLUTE (__SI2C1Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000136          0x4 LONG 0x120a DEFINED (__AltMI2C1Interrupt)?ABSOLUTE (__AltMI2C1Interrupt):DEFINED (__MI2C1Interrupt)?ABSOLUTE (__MI2C1Interrupt):ABSOLUTE (__DefaultInterrupt)
@@ -1122,7 +1129,7 @@ __FCMP
                   0x000144          0x4 LONG 0x120a DEFINED (__AltDMA2Interrupt)?ABSOLUTE (__AltDMA2Interrupt):DEFINED (__DMA2Interrupt)?ABSOLUTE (__DMA2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000146          0x4 LONG 0x120a DEFINED (__AltOC3Interrupt)?ABSOLUTE (__AltOC3Interrupt):DEFINED (__OC3Interrupt)?ABSOLUTE (__OC3Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000148          0x4 LONG 0x120a DEFINED (__AltOC4Interrupt)?ABSOLUTE (__AltOC4Interrupt):DEFINED (__OC4Interrupt)?ABSOLUTE (__OC4Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x00014a          0x4 LONG 0x131a DEFINED (__AltT4Interrupt)?ABSOLUTE (__AltT4Interrupt):DEFINED (__T4Interrupt)?ABSOLUTE (__T4Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00014a          0x4 LONG 0x1354 DEFINED (__AltT4Interrupt)?ABSOLUTE (__AltT4Interrupt):DEFINED (__T4Interrupt)?ABSOLUTE (__T4Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00014c          0x4 LONG 0x120a DEFINED (__AltT5Interrupt)?ABSOLUTE (__AltT5Interrupt):DEFINED (__T5Interrupt)?ABSOLUTE (__T5Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x00014e          0x4 LONG 0x120a DEFINED (__AltINT2Interrupt)?ABSOLUTE (__AltINT2Interrupt):DEFINED (__INT2Interrupt)?ABSOLUTE (__INT2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x000150          0x4 LONG 0x120a DEFINED (__AltU2RXInterrupt)?ABSOLUTE (__AltU2RXInterrupt):DEFINED (__U2RXInterrupt)?ABSOLUTE (__U2RXInterrupt):ABSOLUTE (__DefaultInterrupt)
@@ -1205,9 +1212,9 @@ __FCMP
                   0x0001ea          0x4 LONG 0x120a DEFINED (__AltInterrupt107)?ABSOLUTE (__AltInterrupt107):DEFINED (__Interrupt107)?ABSOLUTE (__Interrupt107):ABSOLUTE (__DefaultInterrupt)
                   0x0001ec          0x4 LONG 0x120a DEFINED (__AltInterrupt108)?ABSOLUTE (__AltInterrupt108):DEFINED (__Interrupt108)?ABSOLUTE (__Interrupt108):ABSOLUTE (__DefaultInterrupt)
                   0x0001ee          0x4 LONG 0x120a DEFINED (__AltInterrupt109)?ABSOLUTE (__AltInterrupt109):DEFINED (__Interrupt109)?ABSOLUTE (__Interrupt109):ABSOLUTE (__DefaultInterrupt)
-                  0x0001f0          0x4 LONG 0x1482 DEFINED (__AltADCP0Interrupt)?ABSOLUTE (__AltADCP0Interrupt):DEFINED (__ADCP0Interrupt)?ABSOLUTE (__ADCP0Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x0001f2          0x4 LONG 0x14ba DEFINED (__AltADCP1Interrupt)?ABSOLUTE (__AltADCP1Interrupt):DEFINED (__ADCP1Interrupt)?ABSOLUTE (__ADCP1Interrupt):ABSOLUTE (__DefaultInterrupt)
-                  0x0001f4          0x4 LONG 0x14e4 DEFINED (__AltADCP2Interrupt)?ABSOLUTE (__AltADCP2Interrupt):DEFINED (__ADCP2Interrupt)?ABSOLUTE (__ADCP2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0001f0          0x4 LONG 0x14bc DEFINED (__AltADCP0Interrupt)?ABSOLUTE (__AltADCP0Interrupt):DEFINED (__ADCP0Interrupt)?ABSOLUTE (__ADCP0Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0001f2          0x4 LONG 0x14f4 DEFINED (__AltADCP1Interrupt)?ABSOLUTE (__AltADCP1Interrupt):DEFINED (__ADCP1Interrupt)?ABSOLUTE (__ADCP1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0001f4          0x4 LONG 0x151e DEFINED (__AltADCP2Interrupt)?ABSOLUTE (__AltADCP2Interrupt):DEFINED (__ADCP2Interrupt)?ABSOLUTE (__ADCP2Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x0001f6          0x4 LONG 0x120a DEFINED (__AltADCP3Interrupt)?ABSOLUTE (__AltADCP3Interrupt):DEFINED (__ADCP3Interrupt)?ABSOLUTE (__ADCP3Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x0001f8          0x4 LONG 0x120a DEFINED (__AltADCP4Interrupt)?ABSOLUTE (__AltADCP4Interrupt):DEFINED (__ADCP4Interrupt)?ABSOLUTE (__ADCP4Interrupt):ABSOLUTE (__DefaultInterrupt)
                   0x0001fa          0x4 LONG 0x120a DEFINED (__AltADCP5Interrupt)?ABSOLUTE (__AltADCP5Interrupt):DEFINED (__ADCP5Interrupt)?ABSOLUTE (__ADCP5Interrupt):ABSOLUTE (__DefaultInterrupt)
@@ -2588,7 +2595,7 @@ LOAD FBS
 LOAD data_init
 
 .debug_pubtypes
-                  0x000150       0x10b7
+                  0x000150       0x1114
  .debug_pubtypes
                   0x000150         0x3b build/maincfg_xc_1_30/production/main.o
  .debug_pubtypes
@@ -2604,102 +2611,102 @@ LOAD data_init
  .debug_pubtypes
                   0x00046a         0x48 build/maincfg_xc_1_30/production/fan.o
  .debug_pubtypes
-                  0x0004b2        0x1fe build/maincfg_xc_1_30/production/control.o
+                  0x0004b2        0x21d build/maincfg_xc_1_30/production/control.o
  .debug_pubtypes
-                  0x0006b0         0xee build/maincfg_xc_1_30/production/comm.o
+                  0x0006cf         0xee build/maincfg_xc_1_30/production/comm.o
  .debug_pubtypes
-                  0x00079e         0x12 build/maincfg_xc_1_30/production/configuration_bits.o
+                  0x0007bd         0x12 build/maincfg_xc_1_30/production/configuration_bits.o
  .debug_pubtypes
-                  0x0007b0         0xae build/maincfg_xc_1_30/production/consol.o
+                  0x0007cf         0xae build/maincfg_xc_1_30/production/consol.o
  .debug_pubtypes
-                  0x00085e         0x7a build/maincfg_xc_1_30/production/capbank.o
+                  0x00087d         0x7a build/maincfg_xc_1_30/production/capbank.o
  .debug_pubtypes
-                  0x0008d8         0x92 build/maincfg_xc_1_30/production/applicator.o
+                  0x0008f7         0x92 build/maincfg_xc_1_30/production/applicator.o
  .debug_pubtypes
-                  0x00096a        0x683 build/maincfg_xc_1_30/production/user.o
+                  0x000989        0x6a2 build/maincfg_xc_1_30/production/user.o
  .debug_pubtypes
-                  0x000fed        0x21a build/maincfg_xc_1_30/production/interrupts.o
+                  0x00102b        0x239 build/maincfg_xc_1_30/production/interrupts.o
 
 __c30_signature
-                  0x001207         0xc0
+                  0x001264         0xc0
  __c30_signature
-                  0x001207          0x6 build/maincfg_xc_1_30/production/main.o
+                  0x001264          0x6 build/maincfg_xc_1_30/production/main.o
  __c30_signature
-                  0x00120d          0x6 build/maincfg_xc_1_30/production/system.o
+                  0x00126a          0x6 build/maincfg_xc_1_30/production/system.o
  __c30_signature
-                  0x001213          0x6 build/maincfg_xc_1_30/production/tec.o
+                  0x001270          0x6 build/maincfg_xc_1_30/production/tec.o
  __c30_signature
-                  0x001219          0x6 build/maincfg_xc_1_30/production/tip.o
+                  0x001276          0x6 build/maincfg_xc_1_30/production/tip.o
  __c30_signature
-                  0x00121f          0x6 build/maincfg_xc_1_30/production/traps.o
+                  0x00127c          0x6 build/maincfg_xc_1_30/production/traps.o
  __c30_signature
-                  0x001225          0x6 build/maincfg_xc_1_30/production/pump.o
+                  0x001282          0x6 build/maincfg_xc_1_30/production/pump.o
  __c30_signature
-                  0x00122b          0x6 build/maincfg_xc_1_30/production/fan.o
+                  0x001288          0x6 build/maincfg_xc_1_30/production/fan.o
  __c30_signature
-                  0x001231          0x6 build/maincfg_xc_1_30/production/control.o
+                  0x00128e          0x6 build/maincfg_xc_1_30/production/control.o
  __c30_signature
-                  0x001237          0x6 build/maincfg_xc_1_30/production/comm.o
+                  0x001294          0x6 build/maincfg_xc_1_30/production/comm.o
  __c30_signature
-                  0x00123d          0x6 build/maincfg_xc_1_30/production/configuration_bits.o
+                  0x00129a          0x6 build/maincfg_xc_1_30/production/configuration_bits.o
  __c30_signature
-                  0x001243          0x6 build/maincfg_xc_1_30/production/consol.o
+                  0x0012a0          0x6 build/maincfg_xc_1_30/production/consol.o
  __c30_signature
-                  0x001249          0x6 build/maincfg_xc_1_30/production/capbank.o
+                  0x0012a6          0x6 build/maincfg_xc_1_30/production/capbank.o
  __c30_signature
-                  0x00124f          0x6 build/maincfg_xc_1_30/production/applicator.o
+                  0x0012ac          0x6 build/maincfg_xc_1_30/production/applicator.o
  __c30_signature
-                  0x001255          0x6 build/maincfg_xc_1_30/production/user.o
+                  0x0012b2          0x6 build/maincfg_xc_1_30/production/user.o
  __c30_signature
-                  0x00125b          0x6 build/maincfg_xc_1_30/production/interrupts.o
+                  0x0012b8          0x6 build/maincfg_xc_1_30/production/interrupts.o
  __c30_signature
-                  0x001261          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
+                  0x0012be          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
  __c30_signature
-                  0x001267          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
+                  0x0012c4          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
  __c30_signature
-                  0x00126d          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(addsf3.eo)
+                  0x0012ca          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(addsf3.eo)
  __c30_signature
-                  0x001273          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(divsf3.eo)
+                  0x0012d0          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(divsf3.eo)
  __c30_signature
-                  0x001279          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(feqltle.eo)
+                  0x0012d6          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(feqltle.eo)
  __c30_signature
-                  0x00127f          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(fgtge.eo)
+                  0x0012dc          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(fgtge.eo)
  __c30_signature
-                  0x001285          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(fixsfsi.eo)
+                  0x0012e2          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(fixsfsi.eo)
  __c30_signature
-                  0x00128b          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(fixunssfsi.eo)
+                  0x0012e8          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(fixunssfsi.eo)
  __c30_signature
-                  0x001291          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(floatunsisf.eo)
+                  0x0012ee          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(floatunsisf.eo)
  __c30_signature
-                  0x001297          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(fpack.eo)
+                  0x0012f4          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(fpack.eo)
  __c30_signature
-                  0x00129d          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(funpack.eo)
+                  0x0012fa          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(funpack.eo)
  __c30_signature
-                  0x0012a3          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(funpack2.eo)
+                  0x001300          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(funpack2.eo)
  __c30_signature
-                  0x0012a9          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(futil.eo)
+                  0x001306          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(futil.eo)
  __c30_signature
-                  0x0012af          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(mulsf3.eo)
+                  0x00130c          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(mulsf3.eo)
  __c30_signature
-                  0x0012b5          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
+                  0x001312          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
  __c30_signature
-                  0x0012bb          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(fcompare.eo)
+                  0x001318          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(fcompare.eo)
  __c30_signature
-                  0x0012c1          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(floatundisf.eo)
+                  0x00131e          0x6 c:/program files (x86)/microchip/xc16/v1.30/bin/bin/../../lib\libm-elf.a(floatundisf.eo)
 
-_0402F42058526288
+_040CD5405947b43b
                     0x2bf0         0x10
- _0402F42058526288
+ _040CD5405947b43b
                     0x2bf0         0x10 build/maincfg_xc_1_30/production/user.o
                     0x2bf0                  _Spi1RxBuff
 
-_0402F54058526288
+_040CD6605947b43b
                     0x2be0         0x10
- _0402F54058526288
+ _040CD6605947b43b
                     0x2be0         0x10 build/maincfg_xc_1_30/production/user.o
                     0x2be0                  _Spi1TxBuff
 
-.nbss               0x0800         0xb8
+.nbss               0x0800         0xbc
  .nbss              0x0800         0x32 build/maincfg_xc_1_30/production/tec.o
                     0x0800                  _indxTecTemperature
                     0x0802                  _TECVoltage
@@ -2731,127 +2738,129 @@ _0402F54058526288
                     0x084d                  _TA2
                     0x084e                  _ES
                     0x0850                  _pntrID
- .nbss              0x0852         0x1c build/maincfg_xc_1_30/production/user.o
+ .nbss              0x0852         0x20 build/maincfg_xc_1_30/production/user.o
                     0x0852                  _Devices
                     0x0854                  _FaultNumber
-                    0x0856                  _PulseCounter
-                    0x085e                  _LgPulseCounter
-                    0x0862                  _LgTypeId
-                    0x0864                  _DiodeVoltage
-                    0x0866                  _CapVoltage
-                    0x086a                  _FlashCheckSum
-                    0x086c                  _StoredCheckSum
- .nbss              0x086e         0x14 build/maincfg_xc_1_30/production/control.o
-                    0x086e                  _current_pulse_fire_task
-                    0x0870                  _current_diode_mode_task
-                    0x0872                  _offTimeCntr
-                    0x0874                  _SPIMeasure
-                    0x0876                  _ActualDiodeCurrent1
-                    0x0878                  _ActualDiodeCurrent2
-                    0x087a                  _ActualLddriverCurrent
-                    0x087c                  _MaxAllowedCurrent
-                    0x087e                  _MinAllowedCurrent
-                    0x0880                  _CapacitorAvarageRawValue
- .nbss              0x0882         0x14 build/maincfg_xc_1_30/production/capbank.o
-                    0x0882                  _current_capacitors_bank_task
-                    0x0884                  _ChargerTimeCntr
-                    0x0888                  _CalculatedChargeVoltage
-                    0x088a                  _ActualCapacitorVoltage
-                    0x088c                  _MaxChargeLimit
-                    0x088e                  _MinChargeLimit
-                    0x0890                  _OnTimeForChargeCalculation
-                    0x0892                  _DEBUG_MEMORY_CapVoltage
-                    0x0894                  _FlickerTimer
- .nbss              0x0896         0x14 build/maincfg_xc_1_30/production/interrupts.o
-                    0x0896                  _HeaderCheckSum
-                    0x0897                  _FrameCheckSum
-                    0x0898                  _BytesToEndOfFrame
-                    0x089a                  _CommTimeOutCount
-                    0x089c                  _cnt100uS
-                    0x089e                  _cntSPIMeasure
-                    0x08a0                  _TecPidTimer
-                    0x08a2                  _PumpVoltageSensingTimer
-                    0x08a4                  _TecVoltageSensingTimer
-                    0x08a6                  _IndxDiodeCurrent
- .nbss              0x08aa          0xe build/maincfg_xc_1_30/production/applicator.o
-                    0x08aa                  _current_app_short_tasks
-                    0x08ac                  _appShortTimeOut
-                    0x08ae                  _LightGuideShortTimeOut
-                    0x08b0                  _current_trigger_task
-                    0x08b2                  _Trigger
-                    0x08b4                  _TriggerCounter
-                    0x08b6                  _current_lihgtguide_short_tasks
+                    0x0856                  _Birst_On_Time
+                    0x0858                  _Birst_Off_Time
+                    0x085a                  _PulseCounter
+                    0x0862                  _LgPulseCounter
+                    0x0866                  _LgTypeId
+                    0x0868                  _DiodeVoltage
+                    0x086a                  _CapVoltage
+                    0x086e                  _FlashCheckSum
+                    0x0870                  _StoredCheckSum
+ .nbss              0x0872         0x14 build/maincfg_xc_1_30/production/control.o
+                    0x0872                  _current_pulse_fire_task
+                    0x0874                  _current_diode_mode_task
+                    0x0876                  _offTimeCntr
+                    0x0878                  _SPIMeasure
+                    0x087a                  _ActualDiodeCurrent1
+                    0x087c                  _ActualDiodeCurrent2
+                    0x087e                  _ActualLddriverCurrent
+                    0x0880                  _MaxAllowedCurrent
+                    0x0882                  _MinAllowedCurrent
+                    0x0884                  _CapacitorAvarageRawValue
+ .nbss              0x0886         0x14 build/maincfg_xc_1_30/production/capbank.o
+                    0x0886                  _current_capacitors_bank_task
+                    0x0888                  _ChargerTimeCntr
+                    0x088c                  _CalculatedChargeVoltage
+                    0x088e                  _ActualCapacitorVoltage
+                    0x0890                  _MaxChargeLimit
+                    0x0892                  _MinChargeLimit
+                    0x0894                  _OnTimeForChargeCalculation
+                    0x0896                  _DEBUG_MEMORY_CapVoltage
+                    0x0898                  _FlickerTimer
+ .nbss              0x089a         0x14 build/maincfg_xc_1_30/production/interrupts.o
+                    0x089a                  _HeaderCheckSum
+                    0x089b                  _FrameCheckSum
+                    0x089c                  _BytesToEndOfFrame
+                    0x089e                  _CommTimeOutCount
+                    0x08a0                  _cnt100uS
+                    0x08a2                  _cntSPIMeasure
+                    0x08a4                  _TecPidTimer
+                    0x08a6                  _PumpVoltageSensingTimer
+                    0x08a8                  _TecVoltageSensingTimer
+                    0x08aa                  _IndxDiodeCurrent
+ .nbss              0x08ae          0xe build/maincfg_xc_1_30/production/applicator.o
+                    0x08ae                  _current_app_short_tasks
+                    0x08b0                  _appShortTimeOut
+                    0x08b2                  _LightGuideShortTimeOut
+                    0x08b4                  _current_trigger_task
+                    0x08b6                  _Trigger
+                    0x08b8                  _TriggerCounter
+                    0x08ba                  _current_lihgtguide_short_tasks
 
-.ndata              0x08b8          0xc
- .ndata             0x08b8          0xc build/maincfg_xc_1_30/production/tec.o
-                    0x08b8                  _StoredTECValue
-                    0x08ba                  _CoolingLevel
-                    0x08bc                  _ActualTecTemperature
-                    0x08c0                  _ActualTermistorValue
+.ndata              0x08bc          0xc
+ .ndata             0x08bc          0xc build/maincfg_xc_1_30/production/tec.o
+                    0x08bc                  _StoredTECValue
+                    0x08be                  _CoolingLevel
+                    0x08c0                  _ActualTecTemperature
+                    0x08c4                  _ActualTermistorValue
 
-.nbss               0x08c4          0xa
- .nbss              0x08c4          0xa build/maincfg_xc_1_30/production/consol.o
-                    0x08c4                  _current_interlock_task
-                    0x08c6                  _InterlockTimeOut
-                    0x08c8                  _current_discharge_task
-                    0x08ca                  _LddriverCurrent
-                    0x08cc                  _current_lddriver_task
+.nbss               0x08c8          0xa
+ .nbss              0x08c8          0xa build/maincfg_xc_1_30/production/consol.o
+                    0x08c8                  _current_interlock_task
+                    0x08ca                  _InterlockTimeOut
+                    0x08cc                  _current_discharge_task
+                    0x08ce                  _LddriverCurrent
+                    0x08d0                  _current_lddriver_task
 
-.ndata              0x08ce          0xa
- .ndata             0x08ce          0xa build/maincfg_xc_1_30/production/user.o
-                    0x08ce                  _CommFlags
-                    0x08d0                  _Devices2
-                    0x08d2                  _SystemState
-                    0x08d4                  _Pulse_On_Time
-                    0x08d6                  _Pulse_Off_Time
+.ndata              0x08d2          0xa
+ .ndata             0x08d2          0xa build/maincfg_xc_1_30/production/user.o
+                    0x08d2                  _CommFlags
+                    0x08d4                  _Devices2
+                    0x08d6                  _SystemState
+                    0x08d8                  _Pulse_On_Time
+                    0x08da                  _Pulse_Off_Time
 
-.nbss               0x08d8         0x14
- .nbss              0x08d8          0x8 build/maincfg_xc_1_30/production/comm.o
-                    0x08d8                  _indxRXbuffer
-                    0x08d9                  _indxTXbuff
-                    0x08da                  _FrameLen
-                    0x08dc                  _tx100uS
-                    0x08de                  _NoCommunicationTimer
- .nbss              0x08e0          0x6 build/maincfg_xc_1_30/production/pump.o
-                    0x08e0                  _PumpVoltage
-                    0x08e2                  _PumpTimer
-                    0x08e4                  _SpiTimeout
- .nbss              0x08e6          0x6 build/maincfg_xc_1_30/production/fan.o
-                    0x08e6                  _current_fan_task
-                    0x08e8                  _indxWaterTemperature
-                    0x08ea                  _TemperatureAdSamplingCounter
+.nbss               0x08dc         0x14
+ .nbss              0x08dc          0x8 build/maincfg_xc_1_30/production/comm.o
+                    0x08dc                  _indxRXbuffer
+                    0x08dd                  _indxTXbuff
+                    0x08de                  _FrameLen
+                    0x08e0                  _tx100uS
+                    0x08e2                  _NoCommunicationTimer
+ .nbss              0x08e4          0x6 build/maincfg_xc_1_30/production/pump.o
+                    0x08e4                  _PumpVoltage
+                    0x08e6                  _PumpTimer
+                    0x08e8                  _SpiTimeout
+ .nbss              0x08ea          0x6 build/maincfg_xc_1_30/production/fan.o
+                    0x08ea                  _current_fan_task
+                    0x08ec                  _indxWaterTemperature
+                    0x08ee                  _TemperatureAdSamplingCounter
 
-.ndata              0x08ec          0xc
- .ndata             0x08ec          0x4 build/maincfg_xc_1_30/production/pump.o
-                    0x08ec                  _current_pump_task
-                    0x08ee                  _PumpVoltageMonitor
- .ndata             0x08f0          0x4 build/maincfg_xc_1_30/production/fan.o
-                    0x08f0                  _ActualWaterTemperature
- .ndata             0x08f4          0x4 build/maincfg_xc_1_30/production/control.o
-                    0x08f4                  _SystemStateToUpdate
-                    0x08f6                  _MeasurePeriod
+.ndata              0x08f0          0xc
+ .ndata             0x08f0          0x4 build/maincfg_xc_1_30/production/pump.o
+                    0x08f0                  _current_pump_task
+                    0x08f2                  _PumpVoltageMonitor
+ .ndata             0x08f4          0x4 build/maincfg_xc_1_30/production/fan.o
+                    0x08f4                  _ActualWaterTemperature
+ .ndata             0x08f8          0x4 build/maincfg_xc_1_30/production/control.o
+                    0x08f8                  _SystemStateToUpdate
+                    0x08fa                  _MeasurePeriod
 
-.bss                0x08f8        0x2f0
- .bss               0x08f8        0x200 build/maincfg_xc_1_30/production/comm.o
-                    0x08f8                  _RXbuffer
-                    0x09f8                  _TXbuffer
- .bss               0x0af8         0xc8 build/maincfg_xc_1_30/production/tip.o
-                    0x0af8                  _IDData
-                    0x0b78                  _ApplicatorCalibration
-                    0x0b98                  _ROM_NO
-                    0x0ba0                  _IDs
-                    0x0bb0                  _ID_APP
-                    0x0bb8                  _ID_LIGHTGUIDE
- .bss               0x0bc0         0x1e build/maincfg_xc_1_30/production/control.o
-                    0x0bc0                  _DiodeCurrent1
-                    0x0bca                  _DiodeCurrent2
-                    0x0bd4                  _MeasuredDiodeVoltage
- .bss               0x0bde          0xa build/maincfg_xc_1_30/production/tec.o
-                    0x0bde                  _TecTemperature
+.bss                0x08fc        0x2f0
+ .bss               0x08fc        0x200 build/maincfg_xc_1_30/production/comm.o
+                    0x08fc                  _RXbuffer
+                    0x09fc                  _TXbuffer
+ .bss               0x0afc         0xc8 build/maincfg_xc_1_30/production/tip.o
+                    0x0afc                  _IDData
+                    0x0b7c                  _ApplicatorCalibration
+                    0x0b9c                  _ROM_NO
+                    0x0ba4                  _IDs
+                    0x0bb4                  _ID_APP
+                    0x0bbc                  _ID_LIGHTGUIDE
+ .bss               0x0bc4         0x1e build/maincfg_xc_1_30/production/control.o
+                    0x0bc4                  _DiodeCurrent1
+                    0x0bce                  _DiodeCurrent2
+                    0x0bd8                  _MeasuredDiodeVoltage
+ .bss               0x0be2          0xa build/maincfg_xc_1_30/production/tec.o
+                    0x0be2                  _TecTemperature
 
-.data               0x0be8          0xa
- .data              0x0be8          0xa build/maincfg_xc_1_30/production/fan.o
-                    0x0be8                  _WaterTemperature
+.data               0x0bec          0xa
+ .data              0x0bec          0xa build/maincfg_xc_1_30/production/fan.o
+                    0x0bec                  _WaterTemperature
 
 .ivt._OscillatorFail
                     0x0006          0x2
@@ -2936,6 +2945,11 @@ _0402F54058526288
  .ivt._T2Interrupt
                     0x0022          0x2 build/maincfg_xc_1_30/production/interrupts.o
 
+.ivt._T3Interrupt
+                    0x0024          0x2
+ .ivt._T3Interrupt
+                    0x0024          0x2 build/maincfg_xc_1_30/production/interrupts.o
+
 .ivt._T4Interrupt
                     0x004a          0x2
  .ivt._T4Interrupt
@@ -2981,69 +2995,69 @@ _0402F54058526288
  .ivt._ADCP2Interrupt
                     0x00f4          0x2 build/maincfg_xc_1_30/production/interrupts.o
 
-.const              0x98a4        0x198 load address 0x0018a4  
- .const             0x98a4        0x198 build/maincfg_xc_1_30/production/tec.o
+.const              0x98de        0x1c0 load address 0x0018de  
+ .const             0x98de        0x1c0 build/maincfg_xc_1_30/production/tec.o
 
-.text             0x001a3c       0x28e8
- .text            0x001a3c        0x9a4 build/maincfg_xc_1_30/production/tip.o
-                  0x001a3c                  _tip_tasks
-                  0x001eb6                  _ReadChipIdData
-                  0x0021a0                  _OWSearch
-                  0x0022ce                  _drive_OW_low
-                  0x0022d8                  _drive_OW_high
-                  0x0022e2                  _read_OW
-                  0x002304                  _OW_reset_pulse
-                  0x002322                  _OW_write_bit
-                  0x00234a                  _OW_read_bit
-                  0x002366                  _OW_write_byte
-                  0x00238a                  _OW_read_byte
-                  0x0023ba                  _Delay_uSxN
- .text            0x0023e0        0x5d4 build/maincfg_xc_1_30/production/user.o
-                  0x0023e0                  _MemorySelfTest
-                  0x002678                  _InitApp
-                  0x002994                  _SPIReadWriteWord
- .text            0x0029b4        0x57a build/maincfg_xc_1_30/production/control.o
-                  0x0029b4                  _SystemCheck
-                  0x0029d8                  _system_state_tasks
-                  0x002b5a                  _PowerDeliverySystemOff
-                  0x002b76                  _diode_mode_tasks
-                  0x002c22                  _pulse_fire_tasks
-                  0x002ce0                  _measurments_tasks
- .text            0x002f2e        0x4d2 build/maincfg_xc_1_30/production/comm.o
-                  0x002f2e                  _comm_tasks
-                  0x002fae                  _SendFrame
-                  0x002fde                  _TxFrameCheckSum
-                  0x003010                  _RxFrameCheckSum
-                  0x003042                  _ExecuteReceivedCommand
- .text            0x003400        0x4ae build/maincfg_xc_1_30/production/tec.o
-                  0x003400                  _tec_tasks
-                  0x00369c                  _PidCompute
-                  0x003748                  _SetTECVoltage
-                  0x0037c2                  _GetTemperatureFromTable
- .text            0x0038ae        0x318 build/maincfg_xc_1_30/production/fan.o
-                  0x0038ae                  _fan_tasks
- .text            0x003bc6        0x2e8 build/maincfg_xc_1_30/production/applicator.o
-                  0x003bc6                  _lihgtguide_short_task
-                  0x003c8c                  _app_short_tasks
-                  0x003d44                  _trigger_tasks
- .text            0x003eae        0x1f2 build/maincfg_xc_1_30/production/pump.o
-                  0x003eae                  _SetPumpVoltage
-                  0x003eec                  _pump_tasks
-                  0x004082                  _PumpFault
- .text            0x0040a0        0x156 build/maincfg_xc_1_30/production/capbank.o
-                  0x0040a0                  _SetChargeVoltage
-                  0x0040d4                  _capacitors_bank_tasks
- .text            0x0041f6        0x12e build/maincfg_xc_1_30/production/consol.o
-                  0x0041f6                  _LDDriver_tasks
-                  0x004220                  _SetDriverCurrent
-                  0x00425a                  _discharge_tasks
-                  0x004296                  _interlock_tasks
+.text             0x001a9e       0x2a94
+ .text            0x001a9e        0x9a4 build/maincfg_xc_1_30/production/tip.o
+                  0x001a9e                  _tip_tasks
+                  0x001f18                  _ReadChipIdData
+                  0x002202                  _OWSearch
+                  0x002330                  _drive_OW_low
+                  0x00233a                  _drive_OW_high
+                  0x002344                  _read_OW
+                  0x002366                  _OW_reset_pulse
+                  0x002384                  _OW_write_bit
+                  0x0023ac                  _OW_read_bit
+                  0x0023c8                  _OW_write_byte
+                  0x0023ec                  _OW_read_byte
+                  0x00241c                  _Delay_uSxN
+ .text            0x002442        0x5ea build/maincfg_xc_1_30/production/user.o
+                  0x002442                  _MemorySelfTest
+                  0x0026da                  _InitApp
+                  0x002a0c                  _SPIReadWriteWord
+ .text            0x002a2c        0x5a6 build/maincfg_xc_1_30/production/control.o
+                  0x002a2c                  _SystemCheck
+                  0x002a50                  _system_state_tasks
+                  0x002be8                  _PowerDeliverySystemOff
+                  0x002c04                  _diode_mode_tasks
+                  0x002cb0                  _pulse_fire_tasks
+                  0x002d84                  _measurments_tasks
+ .text            0x002fd2        0x574 build/maincfg_xc_1_30/production/comm.o
+                  0x002fd2                  _comm_tasks
+                  0x003052                  _SendFrame
+                  0x003082                  _TxFrameCheckSum
+                  0x0030b4                  _RxFrameCheckSum
+                  0x0030e6                  _ExecuteReceivedCommand
+ .text            0x003546        0x50a build/maincfg_xc_1_30/production/tec.o
+                  0x003546                  _tec_tasks
+                  0x00383e                  _PidCompute
+                  0x0038ea                  _SetTECVoltage
+                  0x003964                  _GetTemperatureFromTable
+ .text            0x003a50        0x318 build/maincfg_xc_1_30/production/fan.o
+                  0x003a50                  _fan_tasks
+ .text            0x003d68        0x30a build/maincfg_xc_1_30/production/applicator.o
+                  0x003d68                  _lihgtguide_short_task
+                  0x003e30                  _app_short_tasks
+                  0x003ee8                  _trigger_tasks
+ .text            0x004072        0x23c build/maincfg_xc_1_30/production/pump.o
+                  0x004072                  _SetPumpVoltage
+                  0x0040b0                  _pump_tasks
+                  0x004290                  _PumpFault
+ .text            0x0042ae        0x156 build/maincfg_xc_1_30/production/capbank.o
+                  0x0042ae                  _SetChargeVoltage
+                  0x0042e2                  _capacitors_bank_tasks
+ .text            0x004404        0x12e build/maincfg_xc_1_30/production/consol.o
+                  0x004404                  _LDDriver_tasks
+                  0x00442e                  _SetDriverCurrent
+                  0x004468                  _discharge_tasks
+                  0x0044a4                  _interlock_tasks
 
-.dinit            0x004324         0xbc
- .dinit           0x004324         0xbc data_init
+.dinit            0x004532         0xbc
+ .dinit           0x004532         0xbc data_init
 
-.text             0x0043e0         0x60
- .text            0x0043e0         0x38 build/maincfg_xc_1_30/production/system.o
-                  0x0043e0                  _ConfigureOscillator
- .text            0x004418         0x28 build/maincfg_xc_1_30/production/main.o
-                  0x004418                  _main
+.text             0x0045ee         0x60
+ .text            0x0045ee         0x38 build/maincfg_xc_1_30/production/system.o
+                  0x0045ee                  _ConfigureOscillator
+ .text            0x004626         0x28 build/maincfg_xc_1_30/production/main.o
+                  0x004626                  _main

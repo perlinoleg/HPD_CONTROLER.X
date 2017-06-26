@@ -48,6 +48,7 @@
 #define CMD_INFO_DATA               0xFF
 #define CMD_LIGHTGUIDE_PARAMETER_REQUEST    0x25
 #define CMD_LIGHTGUIDE_PARAMETER_RESPONCE   0x52
+#define CMD_OPERATION_MODE          0x53
 
 #define CMD_HW_STATUS_REQUEST       0xCC
 #define CMD_HW_STATUS_RESPONCE      0xCD
@@ -382,6 +383,19 @@ void ExecuteReceivedCommand(u16 valCMD) {
                 MinAllowedCurrent = LddriverCurrent - LddriverCurrent * 0.30;
             } else SendFrame(1, CMD_NACK);
 #endif
+            break;
+
+        case CMD_OPERATION_MODE:
+            if (RXbuffer[8] == 3) {
+                //slide mode chosen
+                Devices2.SlideModeSelected = TRUE;
+                SlideModePulsePerSquare = RXbuffer[9];
+                SlideModePulsePerSquare <<= 8;
+                SlideModePulsePerSquare += RXbuffer[10];
+            } else {
+                Devices2.SlideModeSelected = FALSE;
+            }
+            SendFrame(1, CMD_ACK); //send ack
             break;
 
         case CMD_LIGHTGUIDE_PARAMETER_REQUEST:

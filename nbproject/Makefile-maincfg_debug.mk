@@ -327,7 +327,7 @@ dist/${CND_CONF}/${IMAGE_TYPE}/HPD_CONTROLER.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: $
 	${MP_CC_DIR}\\xc16-bin2hex dist/${CND_CONF}/${IMAGE_TYPE}/HPD_CONTROLER.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX} -a  -omf=elf  
 	
 	@echo Normalizing hex file
-	@"C:/Program Files (x86)/Microchip/MPLABX/v3.51/mplab_ide/platform/../mplab_ide/modules/../../bin/hexmate" --edf="C:/Program Files (x86)/Microchip/MPLABX/v3.51/mplab_ide/platform/../mplab_ide/modules/../../dat/en_msgs.txt" dist/${CND_CONF}/${IMAGE_TYPE}/HPD_CONTROLER.X.${IMAGE_TYPE}.hex -odist/${CND_CONF}/${IMAGE_TYPE}/HPD_CONTROLER.X.${IMAGE_TYPE}.hex
+	@"C:/Program Files (x86)/Microchip/MPLABX/v3.55/mplab_ide/platform/../mplab_ide/modules/../../bin/hexmate" --edf="C:/Program Files (x86)/Microchip/MPLABX/v3.55/mplab_ide/platform/../mplab_ide/modules/../../dat/en_msgs.txt" dist/${CND_CONF}/${IMAGE_TYPE}/HPD_CONTROLER.X.${IMAGE_TYPE}.hex -odist/${CND_CONF}/${IMAGE_TYPE}/HPD_CONTROLER.X.${IMAGE_TYPE}.hex
 
 endif
 
